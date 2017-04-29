@@ -16,48 +16,53 @@
 <body class="container-fluid">
 
   <header>
-    <h1 class="text-align-center">Kioku</h1>
+    <h1 id="header" class="header text-align-center">Kioku</h1>
 
-    <form id="sign-out" class="sign-out text-align-center">
+    <h3 id="header-status-message" class="header-status-message text-align-center">Header: Please sign up. Have an account? Sign in.</h3>
+
+    <form id="sign-up" class="text-align-center">
       <fieldset>
-        <input type="submit" name="submit" value="Sign out">
+        <legend>Sign up</legend>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <!-- name matters. Our object is made to look like what we see in sign-uo.sh  -->
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
+        <input type="submit" name="submit" value="Sign up">
       </fieldset>
     </form>
 
+    <form id="sign-in" class="text-align-center">
+      <fieldset>
+        <legend>Sign in</legend>
+        <input type="text" name="credentials[email]" placeholder="email">
+        <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="submit" name="submit" value="Sign in">
+      </fieldset>
+    </form>
   </header>
 
-  <h3 id="status-message" class="status-message text-align-center">Please sign up. Have an account? Sign in.</h3>
-  <hr>
+  <aside id="sidebar" class="sidebar">
+    <h3 id="sidebar-status-message" class="header-status-message text-align-center">Side bar: Create a new card.</h3>
 
-  <section class="content-container">
-    <!-- <form id="create-word" class="create-word text-align-center">
+    <form id="create-word" class="create-word text-align-center">
       <fieldset>
         <input type="submit" name="submit" value="Create New Word">
       </fieldset>
-    </form> -->
+    </form>
 
-    <div class="container-sign">
-      <form id="sign-up" class="text-align-center">
-        <fieldset>
-          <legend>Sign up</legend>
-          <input type="text" name="credentials[email]" placeholder="email">
-          <!-- name matters. Our object is made to look like what we see in sign-uo.sh  -->
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
-          <input type="submit" name="submit" value="Sign up">
-        </fieldset>
-      </form>
+    <form id="get-words" class="get-words text-align-center">
+      <fieldset>
+        <input type="submit" name="submit" value="View All Words">
+      </fieldset>
+    </form>
 
-      <form id="sign-in" class="text-align-center">
-        <fieldset>
-          <legend>Sign in</legend>
-          <input type="text" name="credentials[email]" placeholder="email">
-          <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="submit" name="submit" value="Sign in">
-        </fieldset>
-      </form>
-    </div>
+    <form id="get-word" class="get-word text-align-center">
+      <fieldset>
+        <input type="submit" name="submit" value="View A Word">
+        <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
+      </fieldset>
+    </form>
 
     <form id="change-password" class="change-password text-align-center">
       <fieldset>
@@ -69,29 +74,34 @@
         <input type="submit" name="submit" value="Change password">
       </fieldset>
     </form>
-<!--
-    <aside class="view-score">
-      <div class="view-words">
-        <form id="get-words" class="get-words text-align-center">
-          <fieldset>
-            <input type="submit" name="submit" value="View All Words">
-          </fieldset>
-        </form>
 
-        <div id="show-words-container" class="show-words-container"></div>
+    <form id="sign-out" class="sign-out text-align-center">
+      <fieldset>
+        <input type="submit" name="submit" value="Sign out">
+      </fieldset>
+    </form>
 
+  </aside>
 
-        <form id="get-word" class="get-word text-align-center">
-          <fieldset>
-            <input type="submit" name="submit" value="View A Word">
-            <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
-          </fieldset>
-        </form>
-      </div>
-    </aside> -->
+  <section id="card-view" class="card-view">
+    <main>
 
-    <!-- <div id="show-word-container" class="show-word-container text-align-center"></div> -->
+      <form id="update-word" class="update-word text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Update Card">
+          <input class="index-front"  id="index-front" type="text" name="word[id]" placeholder="Enter a word">
+          <input class="index-back" id="index-back" type="text" name="word[id]" placeholder="Enter a definition">
+        </fieldset>
+      </form>
+      <!-- add more cards with Javascript -->
 
+      <form id="delete-word" class="delete-word text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Delete card">
+        </fieldset>
+      </form>
+
+    </main>
   </section>
 
 </body>
