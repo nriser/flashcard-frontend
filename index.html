@@ -1,25 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Kioku</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+
+  <header>
+    <h1 class="text-align-center">Kioku</h1>
+
+    <form id="sign-out" class="sign-out text-align-center">
+      <fieldset>
+        <input type="submit" name="submit" value="Sign out">
+      </fieldset>
+    </form>
+
+  </header>
+
+  <h3 id="status-message" class="status-message text-align-center">Please sign up. Have an account? Sign in.</h3>
+  <hr>
+
+  <section class="content-container">
+    <!-- <form id="create-word" class="create-word text-align-center">
+      <fieldset>
+        <input type="submit" name="submit" value="Create New Word">
+      </fieldset>
+    </form> -->
+
+    <div class="container-sign">
+      <form id="sign-up" class="text-align-center">
+        <fieldset>
+          <legend>Sign up</legend>
+          <input type="text" name="credentials[email]" placeholder="email">
+          <!-- name matters. Our object is made to look like what we see in sign-uo.sh  -->
+          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
+          <input type="submit" name="submit" value="Sign up">
+        </fieldset>
+      </form>
+
+      <form id="sign-in" class="text-align-center">
+        <fieldset>
+          <legend>Sign in</legend>
+          <input type="text" name="credentials[email]" placeholder="email">
+          <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+          <input type="password" name="credentials[password]" placeholder="password">
+          <input type="submit" name="submit" value="Sign in">
+        </fieldset>
+      </form>
+    </div>
+
+    <form id="change-password" class="change-password text-align-center">
+      <fieldset>
+        <legend>Change password</legend>
+        <input type="password" name="passwords[old]" placeholder="old password">
+        <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+        <input type="password" name="passwords[new]" placeholder="new password">
+        <!-- what will our object look like at this point? see notes (1)-->
+        <input type="submit" name="submit" value="Change password">
+      </fieldset>
+    </form>
+<!--
+    <aside class="view-score">
+      <div class="view-words">
+        <form id="get-words" class="get-words text-align-center">
+          <fieldset>
+            <input type="submit" name="submit" value="View All Words">
+          </fieldset>
+        </form>
+
+        <div id="show-words-container" class="show-words-container"></div>
+
+
+        <form id="get-word" class="get-word text-align-center">
+          <fieldset>
+            <input type="submit" name="submit" value="View A Word">
+            <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
+          </fieldset>
+        </form>
+      </div>
+    </aside> -->
+
+    <!-- <div id="show-word-container" class="show-word-container text-align-center"></div> -->
+
+  </section>
+
+</body>
+
 </html>
