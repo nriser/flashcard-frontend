@@ -1,6 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Raleway:400,500|Roboto:400,500');
 
 /* ============================================================
   Global
@@ -15,16 +15,99 @@ html, body, div, section, article, aside, header, legend, footer, nav, h1, h2, h
 	vertical-align: baseline;
 	font: inherit;
 }
-
 /* html5 display rule */
-article, aside, figcaption, figure, footer, header, nav, menu, nav, section {
-	display: block;
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+nav,
+section {
+  display: block;
+}
+/** End: Mini Reset **/
+
+
+/** Global Text Styles **/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+  background-color: #FAFBFC;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/** End: Mini Reset **/
+h1 {
+  font-family: 'Raleway', sans-serif;
+  margin: 0 0 1em;
+  font-size: 12em;
+  font-weight: 400;
+  letter-spacing: 20px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #003169;
+}
+
+h2 {
+  margin: 0 0 0.5em;
+  font-size: 1.6em;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.3em;
+}
+
+h4 {
+  margin: 0 0 1.5em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 1em;
+  text-align: justify;
+  font-size: 1em;
+}
+
+/** End Global Text Styles **/
+
 
 header {
   border: 1px solid green;
+  text-align: center;
+}
+
+header .red {
+  color: red;
 }
 
 legend {
