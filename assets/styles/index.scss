@@ -1,2 +1,42 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+/* ============================================================
+  Global
+============================================================ */
+
+/** Mini Reset **/
+
+html, body, div, section, article, aside, header, legend, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, span, em, strong, img, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	font: inherit;
+}
+
+/* html5 display rule */
+article, aside, figcaption, figure, footer, header, nav, menu, nav, section {
+	display: block;
+}
+
+/** End: Mini Reset **/
+
+header {
+  border: 1px solid green;
+}
+
+legend {
+  border: 0;
+}
+
+.sidebar {
+  border: 1px solid red;
+  // display: none;
+}
+
+.content {
+  border: 1px solid yellow;
+  // display: none;
+}
