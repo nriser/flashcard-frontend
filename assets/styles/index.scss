@@ -144,11 +144,18 @@ input[type="submit"]:hover {
   background-color: initial;
   box-shadow: none;
   border: none;
-  color: green;
+  color: #fff;
 }
 
 .sidebar input[type="submit"]:hover {
 
+}
+
+.sidebar .get-word input[type="submit"] {
+  // border: 2px solid pink;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
 }
 
 /** End Input Styles **/
@@ -195,6 +202,12 @@ legend {
   // border: 1px solid red;
 }
 
+.sidebar-status-message {
+  // border: 2px solid blue;
+  padding: 30px 0 30px 0;
+  margin: 30px 0 30px 0;
+}
+
 .aside-content {
   vertical-align: top;
   // border: 3px solid yellow;
@@ -213,7 +226,6 @@ legend {
 
 .aside-user-forms, .aside-word-forms {
   // border: 1px solid green;
-  height: 300px;
   width: 100%;
   // text-align: center;
   // position: fixed;
@@ -233,6 +245,16 @@ legend {
   -moz-justify-content: space-between;
   // align-items: center;
   // -webkit-align-items: center;
+}
+
+.aside-word-forms {
+  height: 300px;
+  // border: 5px solid blue;
+  margin-bottom: 150px;
+}
+
+.aside-user-forms {
+  height: 100px;
 }
 
 // .sidebar .
