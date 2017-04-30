@@ -1,0 +1,62 @@
+.sidebar {
+  text-align: center;
+  height: 100%;
+  width: 25%;
+  background-color: #dfdfdf;
+  // border: 1px solid red;
+}
+
+.sidebar-status-message {
+  // border: 2px solid blue;
+  padding: 30px 0 30px 0;
+  margin: 30px 0 30px 0;
+}
+
+.aside-content {
+  vertical-align: top;
+  // border: 3px solid yellow;
+  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+}
+
+.aside-user-forms, .aside-word-forms {
+  // border: 1px solid green;
+  width: 100%;
+  // text-align: center;
+  // position: fixed;
+  // top: 50%;
+  // left: 0;
+  // display: none;
+  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  // align-items: center;
+  // -webkit-align-items: center;
+}
+
+.aside-word-forms {
+  height: 300px;
+  // border: 5px solid blue;
+  margin-bottom: 150px;
+}
+
+.aside-user-forms {
+  height: 100px;
+}
