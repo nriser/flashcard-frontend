@@ -185,9 +185,15 @@
     <main id="content" class="content">
       <form id="update-word" class="update-word text-align-center">
         <fieldset>
+          <div class="card-front-back">
+            <div id="card-front" class="card card-front">
+              <input class="card-front-text"  id="card-front-text" type="text" name="word[id]" placeholder="Enter a word">
+            </div>
+            <div id="card-back" class="card card-back">
+              <input class="card-back-text" id="card-back-text" type="text" name="word[id]" placeholder="Enter a definition">
+            </div>
+          </div>
           <input type="submit" name="submit" value="Update Card">
-          <input class="index-front"  id="index-front" type="text" name="word[id]" placeholder="Enter a word">
-          <input class="index-back" id="index-back" type="text" name="word[id]" placeholder="Enter a definition">
         </fieldset>
       </form>
       <!-- add more cards with Javascript -->
