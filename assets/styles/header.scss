@@ -5,13 +5,13 @@
 
 header {
   // border: 1px solid green;
+  background: #fff url(../images/arches-white-seamless.jpg) repeat center bottom;
   text-align: center;
-  height: auto;
   padding: 20px 20px 0 20px;
   position: relative;
   // top: 50%;
   // transform: translateY(-50%);
-  height: 800px;
+  height: 450px;
   background-color: #efefef;
 }
 
@@ -21,6 +21,6 @@ header .red {
 
 .hero {
   position: relative;
-  top: 25%;
+  top: 13%;
   // transform: translateY(-50%);
 }
