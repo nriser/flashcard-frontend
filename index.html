@@ -108,50 +108,49 @@
 
   </header>
 
-  <aside id="sidebar" class="sidebar">
-    <h3 id="sidebar-status-message" class="header-status-message text-align-center">Side bar: Create a new card.</h3>
+  <section id="flashcard-container" class="flashcard-container">
+    <aside id="sidebar" class="sidebar">
+      <h3 id="sidebar-status-message" class="header-status-message text-align-center">Side bar: Create a new card.</h3>
 
-    <form id="create-word" class="create-word text-align-center">
-      <fieldset>
-        <input type="submit" name="submit" value="Create New Word">
-      </fieldset>
-    </form>
+      <form id="create-word" class="create-word text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Create New Word">
+        </fieldset>
+      </form>
 
-    <form id="get-words" class="get-words text-align-center">
-      <fieldset>
-        <input type="submit" name="submit" value="View All Words">
-      </fieldset>
-    </form>
+      <form id="get-words" class="get-words text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="View All Words">
+        </fieldset>
+      </form>
 
-    <form id="get-word" class="get-word text-align-center">
-      <fieldset>
-        <input type="submit" name="submit" value="View A Word">
-        <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
-      </fieldset>
-    </form>
+      <form id="get-word" class="get-word text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="View A Word">
+          <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
+        </fieldset>
+      </form>
 
-    <form id="change-password" class="change-password text-align-center">
-      <fieldset>
-        <legend>Change password</legend>
-        <input type="password" name="passwords[old]" placeholder="old password">
-        <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
-        <input type="password" name="passwords[new]" placeholder="new password">
-        <!-- what will our object look like at this point? see notes (1)-->
-        <input type="submit" name="submit" value="Change password">
-      </fieldset>
-    </form>
+      <form id="change-password" class="change-password text-align-center">
+        <fieldset>
+          <legend>Change password</legend>
+          <input type="password" name="passwords[old]" placeholder="old password">
+          <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+          <input type="password" name="passwords[new]" placeholder="new password">
+          <!-- what will our object look like at this point? see notes (1)-->
+          <input type="submit" name="submit" value="Change password">
+        </fieldset>
+      </form>
 
-    <form id="sign-out" class="sign-out text-align-center">
-      <fieldset>
-        <input type="submit" name="submit" value="Sign out">
-      </fieldset>
-    </form>
+      <form id="sign-out" class="sign-out text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Sign out">
+        </fieldset>
+      </form>
 
-  </aside>
+    </aside>
 
-  <section id="content" class="content">
-    <main>
-
+    <main id="content" class="content">
       <form id="update-word" class="update-word text-align-center">
         <fieldset>
           <input type="submit" name="submit" value="Update Card">
@@ -166,8 +165,8 @@
           <input type="submit" name="submit" value="Delete card">
         </fieldset>
       </form>
-
     </main>
+
   </section>
 
 </body>
