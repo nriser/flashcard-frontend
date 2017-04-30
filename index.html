@@ -22,7 +22,7 @@
 
 
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signup">Sign up</button>
+    <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-signup">Sign up</button>
     <!-- Modal -->
     <div id="modal-signup" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -66,7 +66,7 @@
     </form> -->
 
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-signin">Sign in</button>
+    <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-signin">Sign in</button>
     <!-- Modal -->
     <div id="modal-signin" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -139,7 +139,7 @@
 
         <div class="aside-user-forms">
 
-          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal-changepw">Change password</button>
+          <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
           <!-- Modal -->
           <div id="modal-changepw" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -193,14 +193,14 @@
               <input class="card-back-text" id="card-back-text" type="text" name="word[id]" placeholder="Enter a definition">
             </div>
           </div>
-          <input type="submit" name="submit" value="Update Card">
+          <input class="update-submit" type="submit" name="submit" value="Update Card">
         </fieldset>
       </form>
       <!-- add more cards with Javascript -->
 
       <form id="delete-word" class="delete-word text-align-center">
         <fieldset>
-          <input type="submit" name="submit" value="Delete card">
+          <input class="delete-submit" type="submit" name="submit" value="Delete card">
         </fieldset>
       </form>
     </main>
