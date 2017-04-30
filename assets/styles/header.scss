@@ -1,8 +1,26 @@
+.auth-modals {
+  // border: 2px solid green;
+  text-align: right;
+}
+
 header {
   // border: 1px solid green;
   text-align: center;
+  height: auto;
+  padding: 20px 20px 0 20px;
+  position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
+  height: 800px;
+  background-color: #efefef;
 }
 
 header .red {
   color: red;
+}
+
+.hero {
+  position: relative;
+  top: 25%;
+  // transform: translateY(-50%);
 }
