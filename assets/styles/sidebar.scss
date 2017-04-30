@@ -60,3 +60,21 @@
 .aside-user-forms {
   height: 100px;
 }
+
+.sidebar input[type="submit"] {
+  background-color: initial;
+  box-shadow: none;
+  border: none;
+  color: #fff;
+}
+
+.sidebar input[type="submit"]:hover {
+
+}
+
+.sidebar .get-word input[type="submit"] {
+  // border: 2px solid pink;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
