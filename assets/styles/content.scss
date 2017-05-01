@@ -23,12 +23,17 @@
 
 .content {
   // border: 1px solid blue;
-  padding: 50px 20px 50px 20px;
+  padding: 150px 20px 50px 20px;
   // height: 2000px;
   width: 75%;
   background-color: #F4F4EF;
   // margin-left: 400px;
   // display: none;
+}
+
+.content-status-message {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .content .card-front-back {
