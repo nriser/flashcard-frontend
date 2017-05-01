@@ -2,6 +2,7 @@
 
 .flashcard-container {
   position: relative;
+  display: none;
   // border: 1px solid purple;
   width: 100%;
   height: auto;
@@ -27,7 +28,7 @@
   width: 75%;
   background-color: #F4F4EF;
   // margin-left: 400px;
-  display: none;
+  // display: none;
 }
 
 .content .card-front-back {
@@ -77,16 +78,4 @@
   transform: translate(0%, -50%);
   font-size: 30px;
   border: none;
-}
-
-.content .update-word input[type="submit"] {
-  margin: 50px auto 20px auto;
-  display: block;
-  // border: 2px solid green;
-}
-
-.content .delete-word input[type="submit"] {
-  margin: 20px auto 20px auto;
-  display: block;
-  // border: 2px solid yellow;
 }
