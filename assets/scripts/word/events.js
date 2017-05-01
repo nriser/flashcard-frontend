@@ -27,10 +27,27 @@ const onGetWord = function (event) {
     .catch(ui.getWordFailure)
 }
 
+const onDeleteWord = function (event) {
+  event.preventDefault()
+  api.deleteWord()
+    .then(ui.deleteWordSuccess)
+    .catch(ui.deleteWordFailure)
+}
+
+const onUpdateWord = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.updateWord(data)
+    .then(ui.updateWordSuccess)
+    .catch(ui.updateWordFailure)
+}
+
 const addWordHandlers = () => {
   $('#create-word').on('submit', onCreateWord) // when browser hears on submit event on
   $('#get-words').on('submit', onGetWords)
   $('#get-word').on('submit', onGetWord)
+  $('#delete-word').on('submit', onDeleteWord)
+  $('#update-word').on('submit', onUpdateWord)
 }
 
 module.exports = {
