@@ -7,6 +7,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'modals';
 @import 'header';
 @import 'sidebar';
+@import 'hamburger-menu';
 @import 'content';
 @import 'breakpoints';
 
@@ -15,11 +16,3 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 * {
   // border: 2px solid red;
 }
-
-
-//
-//
-// legend {
-//   border: 0;
-//   color: #606060;
-// }
