@@ -1,0 +1,74 @@
+// .sidebar {
+//   position: absolute;
+//   right: 0; /* to make it go from right to left instead of default left to right */
+//   // top: 45px;
+//   max-width: 0;
+//   // height: 2000px;
+//   overflow: hidden;
+//   margin-top: 50px;
+//   list-style-type: none;
+//   background: rgba(25,25,25,.7);
+//   transition: max-width 0.2s ease-out;
+//   width: 30%;
+//   z-index: 1;
+// }
+
+.flashcard-container > input {
+  // display: inline;
+  display: none;
+}
+
+.flashcard-container > input:checked ~ .sidebar {
+  max-width: 100%;
+  transition: max-width 0.2s ease-in;
+}
+
+.flashcard-container > label, .flashcard-container label:before, .flashcard-container > label:after { /* http://elijahmanor.com/css-animated-hamburger-icon/ */
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 500ms ease-in-out;
+}
+
+.flashcard-container > label {
+  top: 26px;
+  right: 25px;
+}
+
+.flashcard-container > label {
+	// right: 3%;
+	// top: 50%;
+  // transform: translate(0%, -50%);
+}
+
+.flashcard-container > label:before {
+	top: -10px;
+}
+
+.flashcard-container > label:after {
+	bottom: -10px;
+}
+
+.flashcard-container > input:checked + label {
+	background-color: transparent;
+}
+
+.flashcard-container > input:checked + label:before, .flashcard-container > input:checked + label:after {
+	top: 0;
+	bottom: 0;
+}
+
+.flashcard-container > input:checked + label:before {
+	transform: rotate(45deg);
+}
+.flashcard-container > input:checked + label:after {
+	transform: rotate(-45deg);
+}
+.flashcard-container > input:hover ~ label {
+	background: rgba(0,0,0,.2);
+}

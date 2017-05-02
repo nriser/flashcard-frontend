@@ -5,18 +5,14 @@
 
 header {
   // border: 1px solid green;
-  background: #fff url(../images/study.jpg) repeat center bottom;
+  background: #fff url(../images/study.jpg) no-repeat center bottom;
   text-align: center;
   padding: 20px 20px 0 20px;
   position: relative;
   // top: 50%;
   // transform: translateY(-50%);
-  height: 450px;
+  height: 700px;
   background-color: #efefef;
-}
-
-header .red {
-  color: red;
 }
 
 .hero {
