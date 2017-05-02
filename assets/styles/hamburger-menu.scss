@@ -1,17 +1,17 @@
-.sidebar {
-  position: absolute;
-  right: 0; /* to make it go from right to left instead of default left to right */
-  // top: 45px;
-  max-width: 0;
-  // height: 2000px;
-  overflow: hidden;
-  margin-top: 50px;
-  list-style-type: none;
-  background: rgba(25,25,25,.7);
-  transition: max-width 0.2s ease-out;
-  width: 30%;
-  z-index: 1;
-}
+// .sidebar {
+//   position: absolute;
+//   right: 0; /* to make it go from right to left instead of default left to right */
+//   // top: 45px;
+//   max-width: 0;
+//   // height: 2000px;
+//   overflow: hidden;
+//   margin-top: 50px;
+//   list-style-type: none;
+//   background: rgba(25,25,25,.7);
+//   transition: max-width 0.2s ease-out;
+//   width: 30%;
+//   z-index: 1;
+// }
 
 .flashcard-container > input {
   // display: inline;
@@ -28,7 +28,7 @@
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: black;
+  background: #fff;
   position: absolute;
   display: block;
   content: '';
@@ -36,7 +36,7 @@
 }
 
 .flashcard-container > label {
-  top: 25px;
+  top: 26px;
   right: 25px;
 }
 

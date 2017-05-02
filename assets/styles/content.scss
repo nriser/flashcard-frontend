@@ -1,26 +1,5 @@
 @import 'index-card';
 
-.flashcard-container {
-  position: relative;
-  display: none;
-  // border: 1px solid purple;
-  width: 100%;
-  height: auto;
-  display: flex;
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	display: -webkit-flex;     /* NEW - Chrome */
-	flex-direction: row;
-	-webkit-flex-direction: row;
-	-moz-flex-direction: row;
-	// justify-content: space-between;
-	// -webkit-justify-content: space-between;
-	// -moz-justify-content: space-between;
-	// align-items: center;
-	// -webkit-align-items: center;
-}
-
 .content {
   // border: 1px solid blue;
   padding: 150px 20px 50px 20px;
