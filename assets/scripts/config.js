@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ga-wdi-boston.herokuapp.com',
-    development: 'http://localhost:4741/'
+    production: 'https://kiokuflashcards.herokuapp.com',
+    development: 'http://localhost:4741'
   }
 }
 
