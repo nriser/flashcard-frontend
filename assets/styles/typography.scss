@@ -19,6 +19,7 @@ h1 {
   letter-spacing: 25px;
   line-height: 1.1em;
   text-transform: uppercase;
+  // text-shadow:2px 2px rgba(0,0,0,.4);
 }
 
 h2,
@@ -67,6 +68,14 @@ p {
 
 span.red {
   color: red;
+}
+
+span.blur {
+  color: red;
+  background-color: rgba(217, 60, 58, .5);
+  color: #e0eff2;
+  font: italic bold 180px 'Megrim', sans-serif;
+  text-shadow: -4px 3px 0 rgba(217, 60, 58, .8), -14px 7px 0 #0a0e27;
 }
 
 /** End Global Text Styles **/
