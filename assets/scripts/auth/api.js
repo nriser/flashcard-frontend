@@ -5,6 +5,7 @@ const store = require('../store.js')
 
 const signUp = (data) => {
   // to check to see what data gives us, structure
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST', // has to be a string
@@ -13,6 +14,7 @@ const signUp = (data) => {
 } // an object we'll pass into as an ajax request
 
 const signIn = (data) => { // data object passed into  argument will be different from argument in above function
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
     method: 'POST', // has to be a string
@@ -21,6 +23,7 @@ const signIn = (data) => { // data object passed into  argument will be differen
 }
 
 const changePassword = (data) => {
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH', // has to be a string
@@ -32,6 +35,7 @@ const changePassword = (data) => {
 }
 
 const signOut = (data) => {
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-out/' + store.user.id,
     method: 'DELETE', // has to be a string
