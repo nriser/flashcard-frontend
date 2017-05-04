@@ -15,7 +15,7 @@
 
 <body class="container-fluid">
 
-  <header>
+  <header id="header" class="header">
     <div class="auth-modals">
       <!-- Trigger the modal with a button -->
       <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-signup">Sign up</button>
@@ -103,120 +103,129 @@
       </form> -->
     </div>
     <div class="hero">
-      <h1 id="header" class="header text-align-center">Ki<span class="blur red">o</span>ku</h1>
+      <h1 id="hero-header" class="hero-header text-align-center">Ki<span class="blur red">o</span>ku</h1>
       <h3 id="header-status-message" class="header-status-message text-align-center">Learn new words the easy way.</h3>
     </div>
     <!-- <h3 id="header-status-message" class="header-status-message text-align-center">Header: Please sign up. Have an account? Sign in.</h3> -->
 
   </header>
 
-
-  <section id="flashcard-container" class="flashcard-container">
-
-    <div class="flashcard-container-header">
+  <section id="flashcard-view" class="flashcard-view">
+    <header class="flashcard-container-header">
       <h2>Ki<span class="red">o</span>ku</h2>
-    </div>
+    </header>
 
-    <!-- <div id="flashcard-container" class="flashcard-container"> -->
+    <section id="flashcard-container" class="flashcard-container">
 
-    <input id="hamburger-checkbox" class="hamburger-checkbox" type="checkbox" name="hamburger-menu"/>
-    <label id="hamburger-label" class="hamburger-label" for="hamburger-checkbox"></label>
+      <!-- <div id="flashcard-container" class="flashcard-container"> -->
 
-    <aside id="sidebar" class="sidebar">
-      <h3 id="sidebar-status-message" class="sidebar-status-message text-align-center">Side bar: Create a new card.</h3>
+      <input id="hamburger-checkbox" class="hamburger-checkbox" type="checkbox" name="hamburger-menu"/>
+      <label id="hamburger-label" class="hamburger-label" for="hamburger-checkbox"></label>
 
-      <div class="aside-content">
+      <aside id="sidebar" class="sidebar">
+        <!-- <h3 id="sidebar-status-message" class="sidebar-status-message text-align-center">Side bar: Create a new card.</h3> -->
 
-        <div class="aside-word-forms">
-          <form id="create-word" class="create-word text-align-center">
-            <fieldset>
-              <input type="submit" name="submit" value="Create New Word">
-            </fieldset>
-          </form>
+        <div class="aside-content">
 
-          <form id="get-words" class="get-words text-align-center">
-            <fieldset>
-              <input type="submit" name="submit" value="View All Words">
-            </fieldset>
-          </form>
+          <div class="aside-word-forms">
 
-          <form id="get-word" class="get-word text-align-center">
-            <fieldset>
-              <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
-              <input type="submit" name="submit" value="View A Word">
-            </fieldset>
-          </form>
-        </div>
+            <form id="get-words" class="get-words text-align-center">
+              <fieldset>
+                <input type="submit" name="submit" value="View All Words">
+              </fieldset>
+            </form>
 
-        <div class="aside-user-forms">
+            <form id="get-word" class="get-word text-align-center">
+              <fieldset>
+                <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
+                <input type="submit" name="submit" value="View A Word">
+              </fieldset>
+            </form>
+          </div>
 
-          <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
-          <!-- Modal -->
-          <div id="modal-changepw" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <!-- Modal header-->
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Change password</h4>
-                </div>
-                <!-- Modal body-->
-                <div class="modal-body">
-                  <form id="change-password" class="change-password text-align-center">
-                    <fieldset>
-                      <legend>Change password</legend>
-                      <input type="password" name="passwords[old]" placeholder="old password">
-                      <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
-                      <input type="password" name="passwords[new]" placeholder="new password">
-                      <!-- what will our object look like at this point? see notes (1)-->
-                      <input type="submit" name="submit" value="Change password">
-                    </fieldset>
-                  </form>
-                </div>
-                <!-- Modal footer-->
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="aside-user-forms">
+
+            <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
+            <!-- Modal -->
+            <div id="modal-changepw" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <!-- Modal header-->
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Change password</h4>
+                  </div>
+                  <!-- Modal body-->
+                  <div class="modal-body">
+                    <form id="change-password" class="change-password text-align-center">
+                      <fieldset>
+                        <legend>Change password</legend>
+                        <input type="password" name="passwords[old]" placeholder="old password">
+                        <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+                        <input type="password" name="passwords[new]" placeholder="new password">
+                        <!-- what will our object look like at this point? see notes (1)-->
+                        <input type="submit" name="submit" value="Change password">
+                      </fieldset>
+                    </form>
+                  </div>
+                  <!-- Modal footer-->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <form id="sign-out" class="sign-out text-align-center">
-            <fieldset>
-              <input type="submit" name="submit" value="Sign out">
-            </fieldset>
-          </form>
+            <form id="sign-out" class="sign-out text-align-center">
+              <fieldset>
+                <input type="submit" name="submit" value="Sign out">
+              </fieldset>
+            </form>
+
+          </div>
 
         </div>
+      </aside>
 
-      </div>
-    </aside>
+      <main id="content" class="content">
+        <h3 id="content-status-message" class="content-status-message text-align-center">Add a new word</h3>
 
-    <main id="content" class="content">
-      <h3 id="content-status-message" class="content-status-message text-align-center">Add a new word</h3>
-
-      <form id="update-word" class="update-word text-align-center">
-        <fieldset>
-          <div class="card-front-back">
-            <div id="card-front" class="card card-front">
-              <input class="card-front-text"  id="card-front-text" type="text" name="word[id]" placeholder="Enter a word">
+        <form id="update-word" class="update-word text-align-center">
+          <fieldset>
+            <div class="card-front-back">
+              <div id="card-front" class="card card-front">
+                <input class="card-front-text"  id="card-front-text" type="text" name="word[id]" placeholder="Enter a word">
+              </div>
+              <div id="card-back" class="card card-back">
+                <input class="card-back-text" id="card-back-text" type="text" name="word[id]" placeholder="Enter a definition">
+              </div>
             </div>
-            <div id="card-back" class="card card-back">
-              <input class="card-back-text" id="card-back-text" type="text" name="word[id]" placeholder="Enter a definition">
-            </div>
-          </div>
-          <input class="update-submit" type="submit" name="submit" value="Update Card">
-        </fieldset>
-      </form>
-      <!-- add more cards with Javascript -->
+            <input class="update-submit" type="submit" name="submit" value="Update Card">
+          </fieldset>
+        </form>
 
-      <form id="delete-word" class="delete-word text-align-center">
-        <fieldset>
-          <input class="delete-submit" type="submit" name="submit" value="Delete card">
-        </fieldset>
-      </form>
-    </main>
+        <form id="create-word" class="create-word text-align-center">
+          <fieldset>
+            <div class="card-front-back">
+              <div id="card-front" class="card card-front">
+                <input class="card-front-text"  id="card-front-text" type="text" name="word[id]" placeholder="Enter a word">
+              </div>
+              <div id="card-back" class="card card-back">
+                <input class="card-back-text" id="card-back-text" type="text" name="word[id]" placeholder="Enter a definition">
+              </div>
+            </div>
+            <input class="create-submit" type="submit" name="submit" value="Create New Word">
+          </fieldset>
+        </form>
+
+        <form id="delete-word" class="delete-word text-align-center">
+          <fieldset>
+            <input class="delete-submit" type="submit" name="submit" value="Delete card">
+          </fieldset>
+        </form>
+      </main>
+    </section>
   </section>
 
 </body>

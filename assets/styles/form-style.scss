@@ -32,6 +32,7 @@ input[type="submit"] {
 	// transition: border .5s;
 	text-transform: uppercase;
   text-align: center;
+  width: 300px;
 }
 
 input[type="submit"]:hover {
@@ -52,40 +53,50 @@ input[type="submit"]:hover {
   display: inline-block;
 }
 
+// .content .create-word input[type="submit"] {
+//     margin: 50px auto 20px auto;
+//     display: block;
+//     color: #555555;
+//     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+//     border: 1px solid #555555;
+//     transition: border .3s;
+// }
 
-
-
-.content .update-word input[type="submit"] {
-  margin: 50px auto 20px auto;
-  display: block;
-  color: #555555;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  border: 1px solid #555555;
-  transition: border .3s;
-  // border: 2px solid green;
-}
-
-.content .update-word input[type="submit"]:hover {
-  color: red;
-  border: 1px solid red;
-  // border: 2px solid green;
-}
-
-.content .delete-word input[type="submit"] {
+.content .update-word input[type="submit"],
+.content .delete-word input[type="submit"],
+.content .create-word input[type="submit"] {
   margin: 20px auto 20px auto;
   display: block;
   color: #555555;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   border: 1px solid #555555;
   transition: border .3s;
-  // border: 2px solid yellow;
+  // border: 2px solid green;
 }
 
-.content .delete-word input[type="submit"]:hover {
+// .content .delete-word input[type="submit"] {
+//   margin: 20px auto 20px auto;
+//   display: block;
+//   color: #555555;
+//   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+//   border: 1px solid #555555;
+//   transition: border .3s;
+//   // border: 2px solid yellow;
+// }
+
+.content input[type="submit"]:hover {
   color: red;
   border: 1px solid red;
-  // border: 2px solid yellow;
+  // border: 2px solid green;
 }
+
+
+//
+// .content .delete-word input[type="submit"]:hover {
+//   color: red;
+//   border: 1px solid red;
+//   // border: 2px solid yellow;
+// }
 
 // input[type="submit"].update-submit {
 //   border: 2px solid blue;
