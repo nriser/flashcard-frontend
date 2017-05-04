@@ -124,66 +124,58 @@
 
       <aside id="sidebar" class="sidebar">
         <!-- <h3 id="sidebar-status-message" class="sidebar-status-message text-align-center">Side bar: Create a new card.</h3> -->
-
         <div class="aside-content">
 
-          <div class="aside-word-forms">
+          <form id="get-words" class="get-words text-align-center">
+            <fieldset>
+              <input type="submit" name="submit" value="View All Words">
+            </fieldset>
+          </form>
 
-            <form id="get-words" class="get-words text-align-center">
-              <fieldset>
-                <input type="submit" name="submit" value="View All Words">
-              </fieldset>
-            </form>
+          <form id="get-word" class="get-word text-align-center">
+            <fieldset>
+              <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
+              <input type="submit" name="submit" value="View A Word">
+            </fieldset>
+          </form>
 
-            <form id="get-word" class="get-word text-align-center">
-              <fieldset>
-                <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
-                <input type="submit" name="submit" value="View A Word">
-              </fieldset>
-            </form>
-          </div>
-
-          <div class="aside-user-forms">
-
-            <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
-            <!-- Modal -->
-            <div id="modal-changepw" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <!-- Modal header-->
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Change password</h4>
-                  </div>
-                  <!-- Modal body-->
-                  <div class="modal-body">
-                    <form id="change-password" class="change-password text-align-center">
-                      <fieldset>
-                        <legend>Change password</legend>
-                        <input type="password" name="passwords[old]" placeholder="old password">
-                        <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
-                        <input type="password" name="passwords[new]" placeholder="new password">
-                        <!-- what will our object look like at this point? see notes (1)-->
-                        <input type="submit" name="submit" value="Change password">
-                      </fieldset>
-                    </form>
-                  </div>
-                  <!-- Modal footer-->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
+          <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
+          <!-- Modal -->
+          <div id="modal-changepw" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <!-- Modal header-->
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Change password</h4>
+                </div>
+                <!-- Modal body-->
+                <div class="modal-body">
+                  <form id="change-password" class="change-password text-align-center">
+                    <fieldset>
+                      <legend>Change password</legend>
+                      <input type="password" name="passwords[old]" placeholder="old password">
+                      <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+                      <input type="password" name="passwords[new]" placeholder="new password">
+                      <!-- what will our object look like at this point? see notes (1)-->
+                      <input type="submit" name="submit" value="Change password">
+                    </fieldset>
+                  </form>
+                </div>
+                <!-- Modal footer-->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
-
-            <form id="sign-out" class="sign-out text-align-center">
-              <fieldset>
-                <input type="submit" name="submit" value="Sign out">
-              </fieldset>
-            </form>
-
           </div>
+
+          <form id="sign-out" class="sign-out text-align-center">
+            <fieldset>
+              <input type="submit" name="submit" value="Sign out">
+            </fieldset>
+          </form>
 
         </div>
       </aside>
