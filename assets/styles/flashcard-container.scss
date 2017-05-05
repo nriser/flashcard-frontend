@@ -4,12 +4,13 @@
 
 .flashcard-container-header {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   // text-align: left;
   // height: auto;
 }
 
 .flashcard-container {
+  background-color: #F4F4EF;
   position: relative;
   /*display: none;*/
   /*border: 1px solid purple;*/
