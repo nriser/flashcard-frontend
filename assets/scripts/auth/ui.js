@@ -65,7 +65,7 @@ const signOutSuccess = () => {
   // $('div.modal-backdrop').toggleClass('fade')
   // $('div.modal-backdrop').toggleClass('in')
 
-  $('.header').show()
+  $('.header').fadeIn()
   $('.flashcard-container').hide()
   $('.flashcard-container-header').hide()
   $('footer').hide()
