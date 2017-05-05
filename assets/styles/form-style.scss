@@ -148,6 +148,10 @@ input[type="submit"]:hover {
   font-size: .9em;
 }
 
-
+footer input[type="submit"] {
+  letter-spacing: 1px;
+  width: initial;
+  padding: 10px 15px;
+}
 
 /** End Input Styles **/
