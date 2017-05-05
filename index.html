@@ -18,7 +18,7 @@
   <header id="header" class="header">
     <div class="auth-modals">
       <!-- Trigger the modal with a button -->
-      <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-signup">Sign up</button>
+      <button type="button" class="modal-signup modal-btn" data-toggle="modal" data-target="#modal-signup">Sign up</button>
       <!-- Modal -->
       <div id="modal-signup" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -64,7 +64,7 @@
       <!-- Trigger the modal with a button -->
       <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-signin">Sign in</button>
       <!-- Modal -->
-      <div id="modal-signin" class="modal fade" role="dialog">
+      <div id="modal-signin" class="modal-signin modal fade" role="dialog">
         <div class="modal-dialog">
           <!-- Modal content-->
           <div class="modal-content">
@@ -187,9 +187,9 @@
 
     <div id="footer-modals" class="footer-modals">
       <!-- Trigger the modal with a button -->
-      <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw2">Change password</button>
+      <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
       <!-- Modal -->
-      <div id="modal-changepw2" class="modal fade" role="dialog">
+      <div id="modal-changepw" class="modal fade" role="dialog">
         <div class="modal-dialog">
           <!-- Modal content-->
           <div class="modal-content">
@@ -200,7 +200,7 @@
             </div>
             <!-- Modal body-->
             <div class="modal-body">
-              <form id="change-password2" class="change-password text-align-center">
+              <form id="change-password" class="change-password text-align-center">
                 <fieldset>
                   <legend>Change password</legend>
                   <input type="password" name="passwords[old]" placeholder="old password">
