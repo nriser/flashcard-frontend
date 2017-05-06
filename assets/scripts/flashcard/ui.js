@@ -28,23 +28,20 @@ const getFlashcardFailure = () => {
   // $('#show-game-container').text('Please provide a valid ID for a previously played game.')
 }
 
-// const updateFlashcardSuccess = (response) => {
-//   store.game = response.game // store the game object
-// }
-//
-// const getFlashcardsFailure = () => {
-//   // $('#show-games-container').fadeIn()
-//   // // $('#show-games-container').css('visibility', 'visible')
-//   // $('#show-games-container').text('You have not played any games yet.')
-// }
-//
+const getFlashcardsSuccess = (response) => {
+  console.log('response is', response)
+  store.flashcard = response.flashcard // store the game object
+}
+
+const getFlashcardsFailure = () => {
+}
 
 module.exports = {
   createFlashcardSuccess,
   createFlashcardFailure,
   getFlashcardSuccess,
-  getFlashcardFailure
+  getFlashcardFailure,
   // updateFlashcardSuccess,
-  // getFlashcardsSuccess,
-  // getFlashcardsFailure,
+  getFlashcardsSuccess,
+  getFlashcardsFailure
 }

@@ -25,18 +25,18 @@ const onGetFlashcard = function (event) {
     .catch(ui.getFlashcardFailure)
 }
 
-// const onGetFlashcards = function () {
-//   event.preventDefault()
-//   api.getGames()
-//     .then(ui.getGamesSuccess)
-//     .catch(ui.getGamesFailure)
-// }
-//
+const onGetFlashcards = function (event) {
+  event.preventDefault()
+  console.log('you clicked get all')
+  api.getFlashcards()
+    .then(ui.getFlashcardsSuccess)
+    .catch(ui.getFlashcardsFailure)
+}
 
 const addFlashcardHandlers = () => {
   $('#create-flashcard').on('submit', onCreateFlashcard) // when browser hears on submit event on
   $('#get-flashcard').on('submit', onGetFlashcard)
-  // $('#get-flashcards').on('submit', onGetFlashcards)
+  $('#get-flashcards').on('submit', onGetFlashcards)
 }
 
 module.exports = {

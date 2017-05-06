@@ -25,6 +25,17 @@ const getFlashcard = function (data) {
   })
 }
 
+const getFlashcards = function () {
+  console.log(`getFlashcards()`)
+  return $.ajax({
+    method: 'GET',
+    url: config.apiOrigin + '/flashcards/',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 // const updateFlashcard = function (index, value, over) {
 //   return $.ajax({
 //     method: 'PATCH',
@@ -44,21 +55,10 @@ const getFlashcard = function (data) {
 //   })
 // }
 //
-// const getFlashcards = function () {
-//   return $.ajax({
-//     method: 'GET',
-//     url: config.apiOrigin + '/flashcards/',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-//
 
 module.exports = {
   createFlashcard,
-  getFlashcard
+  getFlashcard,
+  getFlashcards
   // updateFlashcard,
-  // getFlashcards,
-
 }
