@@ -132,6 +132,10 @@
             </fieldset>
           </form>
 
+          <button id='update-card-button' class='update-card-button' type="button" name="button">
+            Edit a card
+          </button>
+
           <form id="get-flashcard" class="get-flashcard text-align-center">
             <fieldset>
               <input type="text" name="flashcard[id]" id="flashcard-word" placeholder="Enter word">
@@ -147,6 +151,7 @@
 
         <form id="update-flashcard" class="update-flashcard text-align-center">
           <fieldset>
+            <input id="card-id-update" class="card-id-update" type="number" name="flashcard[id]" placeholder="Enter card ID">
             <div class="card-front-back">
               <div id="card-front" class="card card-front">
                 <input class="card-front-text"  id="card-front-text" type="text" name="flashcard[word]" placeholder="Enter a word">

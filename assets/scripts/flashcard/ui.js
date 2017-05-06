@@ -50,6 +50,7 @@ const getFlashcardsFailure = () => {
 const updateFlashcardSuccess = (response) => {
   console.log('response is', response)
   console.log('View flashcards after update', response.flashcards)
+  $('#content-status-message').text('Card updated successfully')
 }
 
 const updateFlashcardFailure = () => {

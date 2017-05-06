@@ -33,6 +33,12 @@ const onGetFlashcards = function (event) {
     .catch(ui.getFlashcardsFailure)
 }
 
+const onClickUpdateButton = function () {
+  $('#update-flashcard').show()
+  $('#create-flashcard').hide()
+  $('#content-status-message').text('Edit card')
+}
+
 const onUpdateFlashcard = function (event) {
   event.preventDefault()
   console.log('you clicked update')
@@ -48,6 +54,7 @@ const addFlashcardHandlers = () => {
   $('#get-flashcard').on('submit', onGetFlashcard)
   $('#get-flashcards').on('submit', onGetFlashcards)
   $('#update-flashcard').on('submit', onUpdateFlashcard)
+  $('#update-card-button').on('click', onClickUpdateButton)
 }
 
 module.exports = {

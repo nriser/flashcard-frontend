@@ -20,9 +20,10 @@ const signInSuccess = (response) => { // argument can be (response) or something
   console.log(response)
   // resource:  http://stackoverflow.com/questions/13183630/how-to-open-a-bootstrap-modal-window-using-jquery
 
+  $('#create-flashcard').show()
   $('#modal-signin').modal('hide')
   $('.header').hide()
-  $('.update-flashcard').hide()
+  $('#update-flashcard').hide()
   $('.delete-flashcard').hide()
   $('.flashcard-container').show()
   $('.flashcard-container-header').show()
@@ -47,7 +48,6 @@ const changePasswordFailure = () => {
 
 const signOutSuccess = () => {
   // $('.status-message').text('You have successfully signed out!')
-
   $('.header').fadeIn()
   $('.flashcard-container').hide()
   $('.flashcard-container-header').hide()
