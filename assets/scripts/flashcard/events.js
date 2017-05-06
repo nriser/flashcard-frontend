@@ -33,10 +33,21 @@ const onGetFlashcards = function (event) {
     .catch(ui.getFlashcardsFailure)
 }
 
+const onUpdateFlashcard = function (event) {
+  event.preventDefault()
+  console.log('you clicked update')
+  const data = getFormFields(this)
+  console.log('data after getting form fields', data)
+  api.updateFlashcard(data)
+    .then(ui.updateFlashcardSuccess)
+    .catch(ui.updateFlashcardFailure)
+}
+
 const addFlashcardHandlers = () => {
   $('#create-flashcard').on('submit', onCreateFlashcard) // when browser hears on submit event on
   $('#get-flashcard').on('submit', onGetFlashcard)
   $('#get-flashcards').on('submit', onGetFlashcards)
+  $('#update-flashcard').on('submit', onUpdateFlashcard)
 }
 
 module.exports = {

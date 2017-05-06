@@ -3,7 +3,8 @@
 const store = require('../store.js')
 
 const createFlashcardSuccess = (response) => {
-  store.flashcard = response.flashcard
+  console.log(response)
+  // store.flashcard = response.flashcard
   // $('#show-game-container').hide()
   // $('#show-games-container').hide()
   // // $('#show-game-container').css('visibility', 'hidden')
@@ -14,6 +15,7 @@ const createFlashcardSuccess = (response) => {
 }
 
 const createFlashcardFailure = () => {
+  console.log('Something went wrong')
   // $('.status-message').text('Please sign in first.')
 }
 
@@ -23,17 +25,24 @@ const getFlashcardSuccess = (response) => {
 }
 
 const getFlashcardFailure = () => {
-  // $('#show-game-container').fadeIn()
-  // $('#show-game-container').css('visibility', 'visible')
-  // $('#show-game-container').text('Please provide a valid ID for a previously played game.')
+  console.log('Something went wront')
 }
 
 const getFlashcardsSuccess = (response) => {
   console.log('response is', response)
-  store.flashcard = response.flashcard // store the game object
+  store.flashcard = response.flashcard // store the flashcard object
 }
 
 const getFlashcardsFailure = () => {
+  console.log('Something went wrong')
+}
+
+const updateFlashcardSuccess = (response) => {
+  console.log('response is', response)
+  console.log('View flashcards after update', response.flashcards)
+}
+
+const updateFlashcardFailure = () => {
 }
 
 module.exports = {
@@ -41,7 +50,8 @@ module.exports = {
   createFlashcardFailure,
   getFlashcardSuccess,
   getFlashcardFailure,
-  // updateFlashcardSuccess,
   getFlashcardsSuccess,
-  getFlashcardsFailure
+  getFlashcardsFailure,
+  updateFlashcardSuccess,
+  updateFlashcardFailure
 }
