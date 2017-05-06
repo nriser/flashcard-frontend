@@ -17,6 +17,17 @@ const createFlashcardFailure = () => {
   // $('.status-message').text('Please sign in first.')
 }
 
+const getFlashcardSuccess = (response) => {
+  console.log('response is', response)
+  store.flashcard = response.flashcard
+}
+
+const getFlashcardFailure = () => {
+  // $('#show-game-container').fadeIn()
+  // $('#show-game-container').css('visibility', 'visible')
+  // $('#show-game-container').text('Please provide a valid ID for a previously played game.')
+}
+
 // const updateFlashcardSuccess = (response) => {
 //   store.game = response.game // store the game object
 // }
@@ -27,22 +38,13 @@ const createFlashcardFailure = () => {
 //   // $('#show-games-container').text('You have not played any games yet.')
 // }
 //
-// const getFlashcardSuccess = (response) => {
-//   $('#show-game-container').fadeIn()
-// }
-//
-// const getFlashcardFailure = () => {
-//   // $('#show-game-container').fadeIn()
-//   // $('#show-game-container').css('visibility', 'visible')
-//   // $('#show-game-container').text('Please provide a valid ID for a previously played game.')
-// }
 
 module.exports = {
   createFlashcardSuccess,
-  createFlashcardFailure
+  createFlashcardFailure,
+  getFlashcardSuccess,
+  getFlashcardFailure
   // updateFlashcardSuccess,
   // getFlashcardsSuccess,
   // getFlashcardsFailure,
-  // getFlashcardSuccess,
-  // getFlashcardFailure
 }

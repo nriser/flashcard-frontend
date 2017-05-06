@@ -15,15 +15,15 @@ const onCreateFlashcard = function (event) {
     .catch(ui.createFlashcardFailure)
 }
 
-// const onAddAdvice = function (event) {
-//   event.preventDefault()
-//   console.log('clicked button')
-//   const data = getFormFields(this)
-//   console.log('this after get form fields', data)
-//   api.addAdvice(data)
-//     .then(ui.adviceAddSuccess)
-//     .catch(ui.adviceAddFail)
-// }
+const onGetFlashcard = function (event) {
+  event.preventDefault()
+  console.log('you clicked get')
+  const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
+  console.log('data after getting form fields', data)
+  api.getFlashcard(data)
+    .then(ui.getFlashcardSuccess)
+    .catch(ui.getFlashcardFailure)
+}
 
 // const onGetFlashcards = function () {
 //   event.preventDefault()
@@ -32,18 +32,11 @@ const onCreateFlashcard = function (event) {
 //     .catch(ui.getGamesFailure)
 // }
 //
-// const onGetFlashcard = function (event) {
-//   const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
-//   event.preventDefault()
-//   api.getGame(data)
-//     .then(ui.getGameSuccess)
-//     .catch(ui.getGameFailure)
-// }
 
 const addFlashcardHandlers = () => {
   $('#create-flashcard').on('submit', onCreateFlashcard) // when browser hears on submit event on
-  // $('#get-games').on('submit', onGetFlashcards)
-  // $('#get-game').on('submit', onGetFlashcard)
+  $('#get-flashcard').on('submit', onGetFlashcard)
+  // $('#get-flashcards').on('submit', onGetFlashcards)
 }
 
 module.exports = {

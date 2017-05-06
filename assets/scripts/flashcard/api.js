@@ -15,7 +15,16 @@ const createFlashcard = function (data) {
   })
 }
 
-//    data: {}
+const getFlashcard = function (data) {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiOrigin + '/flashcards/' + data.flashcard.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 // const updateFlashcard = function (index, value, over) {
 //   return $.ajax({
 //     method: 'PATCH',
@@ -45,19 +54,11 @@ const createFlashcard = function (data) {
 //   })
 // }
 //
-// const getFlashcard = function (data) {
-//   return $.ajax({
-//     method: 'GET',
-//     url: config.apiOrigin + '/flashcards/' + data.game.id,
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
 
 module.exports = {
-  createFlashcard
+  createFlashcard,
+  getFlashcard
   // updateFlashcard,
   // getFlashcards,
-  // getFlashcard
+
 }
