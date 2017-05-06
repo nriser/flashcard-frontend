@@ -50,9 +50,23 @@ const updateFlashcard = function (data) {
   })
 }
 
+const deleteFlashcard = function (data) {
+  console.log('at delete flashcard, data is', data)
+  console.log('at delete flashcard, data flashcard id is', data.flashcard.id)
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiOrigin + '/flashcards/' + data.flashcard.id,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   createFlashcard,
   getFlashcard,
   getFlashcards,
-  updateFlashcard
+  updateFlashcard,
+  deleteFlashcard
 }

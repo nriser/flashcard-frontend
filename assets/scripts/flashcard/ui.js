@@ -55,6 +55,14 @@ const updateFlashcardSuccess = (response) => {
 const updateFlashcardFailure = () => {
 }
 
+const deleteFlashcardSuccess = (response) => {
+  console.log('response is', response)
+  // $('#content-status-message').text('Card updated successfully')
+}
+
+const deleteFlashcardFailure = () => {
+}
+
 module.exports = {
   createFlashcardSuccess,
   createFlashcardFailure,
@@ -63,5 +71,7 @@ module.exports = {
   getFlashcardsSuccess,
   getFlashcardsFailure,
   updateFlashcardSuccess,
-  updateFlashcardFailure
+  updateFlashcardFailure,
+  deleteFlashcardSuccess,
+  deleteFlashcardFailure
 }

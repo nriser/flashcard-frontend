@@ -24,7 +24,6 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('#modal-signin').modal('hide')
   $('.header').hide()
   $('#update-flashcard').hide()
-  $('.delete-flashcard').hide()
   $('.flashcard-container').show()
   $('.flashcard-container-header').show()
   $('footer').show()
