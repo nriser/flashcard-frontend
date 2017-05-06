@@ -39,6 +39,12 @@ const onClickUpdateButton = function () {
   $('#content-status-message').text('Edit card')
 }
 
+const onClickCreateButton = function () {
+  $('#update-flashcard').hide()
+  $('#create-flashcard').show()
+  $('#content-status-message').text('Create a new card')
+}
+
 const onUpdateFlashcard = function (event) {
   event.preventDefault()
   console.log('you clicked update')
@@ -55,6 +61,7 @@ const addFlashcardHandlers = () => {
   $('#get-flashcards').on('submit', onGetFlashcards)
   $('#update-flashcard').on('submit', onUpdateFlashcard)
   $('#update-card-button').on('click', onClickUpdateButton)
+  $('#create-card-button').on('click', onClickCreateButton)
 }
 
 module.exports = {
