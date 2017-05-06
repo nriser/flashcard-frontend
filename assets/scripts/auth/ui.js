@@ -18,18 +18,9 @@ const signUpFailure = () => {
 const signInSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   // because i know that i'll need that token again later, i'll store it somewhere
   console.log(response)
-  // $('.header').hide()
-
-  // $('#myModal').modal('toggle');
-  $('#modal-signin').modal('hide')
   // resource:  http://stackoverflow.com/questions/13183630/how-to-open-a-bootstrap-modal-window-using-jquery
-  // $('#myModal').modal('hide');
 
-  // $('body.modal-open').toggleClass('modal-open')
-  // $('div.modal-backdrop').toggleClass('modal-backdrop')
-  // $('div.modal-backdrop').toggleClass('fade')
-  // $('div.modal-backdrop').toggleClass('in')
-
+  $('#modal-signin').modal('hide')
   $('.header').hide()
   $('.flashcard-container').show()
   $('.flashcard-container-header').show()
@@ -54,16 +45,6 @@ const changePasswordFailure = () => {
 
 const signOutSuccess = () => {
   // $('.status-message').text('You have successfully signed out!')
-
-  // $('.flashcard-container').hide()
-  // $('footer').hide()
-  // $('.header').show()
-  // $('.modal-signin').hide()
-
-  // $('body.modal-open').toggleClass('modal-open')
-  // $('div.modal-backdrop').toggleClass('modal-backdrop')
-  // $('div.modal-backdrop').toggleClass('fade')
-  // $('div.modal-backdrop').toggleClass('in')
 
   $('.header').fadeIn()
   $('.flashcard-container').hide()

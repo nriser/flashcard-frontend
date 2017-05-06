@@ -126,13 +126,13 @@
         <!-- <h3 id="sidebar-status-message" class="sidebar-status-message text-align-center">Side bar: Create a new card.</h3> -->
         <div class="aside-content">
 
-          <form id="get-words" class="get-words text-align-center">
+          <form id="get-flashcards" class="get-flashcards text-align-center">
             <fieldset>
               <input type="submit" name="submit" value="View All Words">
             </fieldset>
           </form>
 
-          <form id="get-word" class="get-word text-align-center">
+          <form id="get-flashcard" class="get-flashcard text-align-center">
             <fieldset>
               <input type="text" name="word[id]" id="word-id" placeholder="Enter word ID">
               <input type="submit" name="submit" value="View A Word">
@@ -145,7 +145,7 @@
       <main id="content" class="content">
         <h3 id="content-status-message" class="content-status-message text-align-center">Add a new word</h3>
 
-        <form id="update-word" class="update-word text-align-center">
+        <form id="update-flashcard" class="update-flashcard text-align-center">
           <fieldset>
             <div class="card-front-back">
               <div id="card-front" class="card card-front">
@@ -159,21 +159,21 @@
           </fieldset>
         </form>
 
-        <form id="create-word" class="create-word text-align-center">
+        <form id="create-flashcard" class="create-flashcard text-align-center">
           <fieldset>
             <div class="card-front-back">
               <div id="card-front" class="card card-front">
-                <input class="card-front-text"  id="card-front-text" type="text" name="word[id]" placeholder="Enter a word">
+                <input class="card-front-text"  id="card-front-text" type="text" name="flashcard[word]" placeholder="Enter a word">
               </div>
               <div id="card-back" class="card card-back">
-                <input class="card-back-text" id="card-back-text" type="text" name="word[id]" placeholder="Enter a definition">
+                <input class="card-back-text" id="card-back-text" type="text" name="flashcard[definition]" placeholder="Enter a definition">
               </div>
             </div>
             <input class="create-submit" type="submit" name="submit" value="Create New Word">
           </fieldset>
         </form>
 
-        <form id="delete-word" class="delete-word text-align-center">
+        <form id="delete-flashcard" class="delete-flashcard text-align-center">
           <fieldset>
             <input class="delete-submit" type="submit" name="submit" value="Delete card">
           </fieldset>
