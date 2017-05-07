@@ -48,6 +48,8 @@ const getFlashcardsSuccess = (response) => {
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
   // $('footer').show()
+  $('#view-all').fadeIn()
+  $('.content').hide()
 }
 
 const getFlashcardsFailure = () => {

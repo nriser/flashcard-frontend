@@ -35,14 +35,17 @@ const onGetFlashcards = function (event) {
 }
 
 const onClickUpdateButton = function () {
-  $('#update-flashcard').show()
+  $('.content').fadeIn()
+  $('#update-flashcard').fadeIn()
   $('#create-flashcard').hide()
   $('#content-status-message').text('Edit card')
 }
 
 const onClickCreateButton = function () {
   $('#update-flashcard').hide()
-  $('#create-flashcard').show()
+  $('.content').fadeIn()
+  $('#create-flashcard').fadeIn()
+  $('#view-all').hide()
   $('#content-status-message').text('Create a new card')
 }
 

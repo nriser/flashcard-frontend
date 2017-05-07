@@ -5,7 +5,8 @@
 
 .flashcard-container > input {
   // display: inline;
-  display: none;
+  // display: none;
+  position: absolute;
 }
 
 .flashcard-container > input:checked ~ .sidebar {
