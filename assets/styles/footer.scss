@@ -1,9 +1,12 @@
 footer {
   // border: 2px solid green;
   padding: 0 20px;
-  height: 70px;
+  height: 5%;
   background-color: #D64947;
-  position: relative;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  width: 100%;
   display: none;
 }
 
@@ -29,7 +32,7 @@ footer .footer-message {
   // display: block;
   margin: auto;
   position: absolute;
-  top: 30px;
+  top: 25%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);

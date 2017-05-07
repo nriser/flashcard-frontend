@@ -1,6 +1,12 @@
+.view-all {
+  // border: 5px solid pink
+  // padding-top: 250px
+}
+
 .card-response {
-  // border: 10px solid yellow;
-  width: 100%;
+  // border: 5px solid yellow;
+  margin: 250px auto 100px auto;
+  width: 90%;
   display: flex;
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -13,6 +19,7 @@
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -webkit-flex-flow: row wrap;
+  align-content: space-between;
   flex-flow: row wrap;
   // display: inline-block;
 }
@@ -23,8 +30,7 @@
 // }
 
 .card-container {
-    // float: left;
-    // width: 500px;
+    margin-bottom: 80px;
 }
 
 .flip-container {
