@@ -5,6 +5,10 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
+// Fix: Change pw bootstrap modal appearing under background
+// Resource: http://stackoverflow.com/questions/10636667/bootstrap-modal-appearing-under-background
+$('#modal-changepw').appendTo('body')
+
 const onCreateFlashcard = function (event) {
   event.preventDefault()
   console.log('you clicked create')
