@@ -31,6 +31,7 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('.flashcard-container').show()
   $('.flashcard-container-header').show()
   $('footer').show()
+  $('#view-all').fadeIn()
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
   $('.status-message').text('You have successfully signed in! Create a new game to play!')
@@ -60,6 +61,7 @@ const signOutSuccess = () => {
   $('.flashcard-container').hide()
   $('.flashcard-container-header').hide()
   $('footer').hide()
+  $('#view-all').hide()
 
   store.user = null // only have one person signed in in a givne session, one browser
 }
