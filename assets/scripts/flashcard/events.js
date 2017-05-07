@@ -28,6 +28,7 @@ const onGetFlashcard = function (event) {
 const onGetFlashcards = function (event) {
   event.preventDefault()
   console.log('you clicked get all')
+  // alert('onGetFlashcards')
   api.getFlashcards()
     .then(ui.getFlashcardsSuccess)
     .catch(ui.getFlashcardsFailure)

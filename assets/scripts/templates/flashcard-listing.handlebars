@@ -1,0 +1,63 @@
+<section id="card-response" class="card-response">
+
+  {{#each flashcards as |flashcard|}}
+
+    <!-- {{> partial}}
+    Don't uncomment yet -->
+
+   <!-- Developers, why are we using data-id and not just id? -->
+    <!-- <h1 data-id="{{book.id}}"> <small>Title: {{book.title}}</small></h1> -->
+    <!-- <div>
+      {{#if book.description}}
+        {{book.description}}
+      {{else}}
+        No description.
+      {{/if}}
+    </div> -->
+
+    <div id="card-container" class="card-container column-md-4">
+      <div class="card-id" id="card-id">
+        Card ID: {{flashcard.id}}
+      </div>
+
+      <div id="flip-container" class="flip-container" ontouchstart="this.classList.toggle('hover')">
+
+        <div class="flipper">
+          <div id="flip-front" class="flip-front card">
+            <p id="flip-front-text" class="flip-front-text">
+              {{flashcard.word}}
+            </p>
+          </div>
+
+          <div id="flip-back" class="flip-back card">
+            <p id="flip-back-text" class="flip-back-text">
+              {{flashcard.definition}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--
+      {{#if book.description}}
+        {{book.description}}
+      {{else}}
+        No description.
+      {{/if}} -->
+
+       <!-- <button class="deleteBookButton" data-id="{{book.id}}" type="button" name="button">Remove</button> -->
+
+
+
+  <!-- also try "{{book.id}}" -->
+
+
+
+  {{/each}}
+
+</section>
+
+<!-- <h1 data-id="{{book.id}}"> If i statically set (hard code) the book id, each book will have the same id-->
+
+<!-- what partial does: adds a line for each book "I'm a partial that's included in every book iteration ". It's just a handlebars file that's being required by another handlebar file -->
+<!-- if you call this partial partiale, then the partial.handlebar file should be called partiale.handlebar -->

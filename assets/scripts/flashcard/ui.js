@@ -1,6 +1,7 @@
 'use strict'
 // remove signIn and signOut
 const store = require('../store.js')
+const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
 
 const createFlashcardSuccess = (response) => {
   console.log('response ', response)
@@ -27,7 +28,7 @@ const createFlashcardFailure = () => {
 
 const getFlashcardSuccess = (response) => {
   console.log('response is', response)
-  store.flashcard = response.flashcard
+  // store.flashcard = response.flashcard
 }
 
 const getFlashcardFailure = () => {
@@ -35,9 +36,15 @@ const getFlashcardFailure = () => {
 }
 
 const getFlashcardsSuccess = (response) => {
+  // alert('getFlashcardsSuccess')
   console.log('response is', response)
-  store.flashcard = response.flashcard // store the flashcard object
-  console.log('store is', store)
+  store.flashcard = response.flashcard // store the flashcard object in user object (store)
+  console.log('store is ', store)
+  console.log('store.flashcard is ', store.flashcard)
+  let showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
+  $('#view-all').append(showFlashcardsHtml) // first spot in which the elelments are appended to the dom.
+  // $('.deleteBookButton').on('click', onDeleteBook);
+  // alert('after append in getFlashcardsSuccess')
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
   // $('footer').show()

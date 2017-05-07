@@ -1,6 +1,10 @@
 'use strict'
 
+const flashcardapi = require('../flashcard/api')
+const flashcardui = require('../flashcard/ui')
+
 const store = require('../store.js')
+const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
 
 // $('.status-message').show()
 
@@ -19,17 +23,22 @@ const signInSuccess = (response) => { // argument can be (response) or something
   // because i know that i'll need that token again later, i'll store it somewhere
   console.log(response)
   // resource:  http://stackoverflow.com/questions/13183630/how-to-open-a-bootstrap-modal-window-using-jquery
-
-  $('#create-flashcard').show()
+  // $('.deleteBookButton').on('click', onDeleteBook);
+  // $('#create-flashcard').show()
   $('#modal-signin').modal('hide')
   $('.header').hide()
-  $('#update-flashcard').hide()
+  // $('#update-flashcard').hide()
   $('.flashcard-container').show()
   $('.flashcard-container-header').show()
   $('footer').show()
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
   $('.status-message').text('You have successfully signed in! Create a new game to play!')
+
+  // event.preventDefault() // don't use this or else won't work
+  flashcardapi.getFlashcards()
+    .then(flashcardui.getFlashcardsSuccess)
+    .catch(flashcardui.getFlashcardsFailure)
 }
 
 const signInFailure = () => {
