@@ -8,7 +8,21 @@ const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebar
 
 const signUpSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   console.log(response)
-  $('.status-message').text('You have successfully signed up! Please sign in.')
+  $('#modal-signup').modal('hide')
+  $('.header').hide()
+  // $('#update-flashcard').hide()
+  $('.flashcard-container').fadeIn()
+  $('.flashcard-container-header').show()
+  $('footer').fadeIn()
+  $('#view-all').fadeIn()
+
+  store.user = response.user // response.user is the email id and token // stores whatever that was in that response
+  $('.status-message').text('You have successfully signed in! Create a new game to play!')
+
+  // event.preventDefault() // don't use this or else won't work
+  flashcardapi.getFlashcards()
+    .then(flashcardui.getFlashcardsSuccess)
+    .catch(flashcardui.getFlashcardsFailure)
 }
 
 const signUpFailure = () => {

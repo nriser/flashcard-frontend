@@ -9,8 +9,16 @@ const ui = require('./ui')
 const onSignUp = function (event) {
   const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
   event.preventDefault()
+  // api.signUp(data) // check the api.js file to see. When successful, show signUpSucess message, otherwise, signUpFailure message
+  //   .then(ui.signUpSuccess)
+  //   .catch(ui.signUpFailure)
   api.signUp(data) // check the api.js file to see. When successful, show signUpSucess message, otherwise, signUpFailure message
     .then(ui.signUpSuccess)
+    .then(() => {
+      api.signIn(data)
+        .then(ui.signInSuccess)
+        .catch(ui.signInFailure)
+    })
     .catch(ui.signUpFailure)
 }
 
