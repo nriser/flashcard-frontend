@@ -30,7 +30,6 @@ const signUpFailure = () => {
 }
 
 const signInSuccess = (response) => { // argument can be (response) or something too. Just an argument name
-  // because i know that i'll need that token again later, i'll store it somewhere
   console.log(response)
   $('#modal-signin').modal('hide')
   $('.header').hide()

@@ -5,7 +5,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
-// Fix: Change pw bootstrap modal appearing under background
+// Fix: Change-pw bootstrap modal appearing under background
 // Resource: http://stackoverflow.com/questions/10636667/bootstrap-modal-appearing-under-background
 $('#modal-changepw').appendTo('body')
 
@@ -64,7 +64,7 @@ const onUpdateFlashcard = function (event) {
 }
 
 const addFlashcardHandlers = () => {
-  $('#create-flashcard').on('submit', onCreateFlashcard) // when browser hears on submit event on
+  $('#create-flashcard').on('submit', onCreateFlashcard)
   $('#get-flashcard').on('submit', onGetFlashcard)
   $('#get-flashcards').on('submit', onGetFlashcards)
   $('#update-flashcard').on('submit', onUpdateFlashcard)

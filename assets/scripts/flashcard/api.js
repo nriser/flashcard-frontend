@@ -3,6 +3,7 @@
 const config = require('../config.js')
 const store = require('../store.js')
 
+// CREATE
 const createFlashcard = function (data) {
   console.log('at create flashcard, data is', data)
   console.log('at create flashcard, store is', store)
@@ -16,6 +17,7 @@ const createFlashcard = function (data) {
   })
 }
 
+// GET
 const getFlashcard = function (data) {
   return $.ajax({
     method: 'GET',
@@ -26,6 +28,7 @@ const getFlashcard = function (data) {
   })
 }
 
+// GET
 const getFlashcards = function () {
   console.log(`getFlashcards()`)
   return $.ajax({
@@ -37,6 +40,7 @@ const getFlashcards = function () {
   })
 }
 
+// PATCH
 const updateFlashcard = function (data) {
   console.log('at update flashcard, data is', data)
   console.log('at update flashcard, data flashcard id is', data.flashcard.id)
@@ -50,6 +54,7 @@ const updateFlashcard = function (data) {
   })
 }
 
+// DELETE
 const deleteFlashcard = function (data) {
   console.log('at delete flashcard, data is', data)
   console.log('at delete flashcard, data flashcard id is', data.flashcard.id)

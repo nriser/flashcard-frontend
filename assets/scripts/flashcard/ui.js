@@ -65,7 +65,6 @@ const getFlashcardsSuccess = (response) => {
 
 const onDeleteFlashcard = function (event) {
   event.preventDefault()
-  // console.log('you clicked delete')
   // console.log('event in onDeleteFlashcard is', event)
   // console.log('event.target in onDeleteFlashcard is ', event.target)
   // console.log($(event.target).data('id'))
@@ -99,6 +98,7 @@ const updateFlashcardSuccess = (response) => {
 }
 
 const updateFlashcardFailure = () => {
+  console.log('something went wrong with the udpate')
 }
 
 const deleteFlashcardSuccess = (response) => {
