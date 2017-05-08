@@ -72,8 +72,11 @@ const onDeleteFlashcard = function (event) {
   // console.log($(event.target).data('id'))
   // const data = $(event.target).parent().data('id', '{{flashcard.id}}')
   createDataObject($(event.target).data('id'))
+  console.log('what is event.target ', event.target)
+  // debugger
+  // disable button because double clicking causes 404 errors
+  $(event.target).prop('disabled', true)
   $(event.target).parent().fadeOut()
-  $(event.target).disabled = true
 }
 
 const createDataObject = function (flashcardId) {
