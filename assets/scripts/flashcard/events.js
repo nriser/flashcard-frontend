@@ -63,16 +63,6 @@ const onUpdateFlashcard = function (event) {
     .catch(ui.updateFlashcardFailure)
 }
 
-const onDeleteFlashcard = function (event) {
-  event.preventDefault()
-  console.log('you clicked delete')
-  const data = getFormFields(this)
-  console.log('data after getting form fields', data)
-  api.deleteFlashcard(data)
-    .then(ui.deleteFlashcardSuccess)
-    .catch(ui.deleteFlashcardFailure)
-}
-
 const addFlashcardHandlers = () => {
   $('#create-flashcard').on('submit', onCreateFlashcard) // when browser hears on submit event on
   $('#get-flashcard').on('submit', onGetFlashcard)
@@ -80,7 +70,6 @@ const addFlashcardHandlers = () => {
   $('#update-flashcard').on('submit', onUpdateFlashcard)
   $('#update-card-button').on('click', onClickUpdateButton)
   $('#create-card-button').on('click', onClickCreateButton)
-  $('#delete-flashcard').on('submit', onDeleteFlashcard)
 }
 
 module.exports = {

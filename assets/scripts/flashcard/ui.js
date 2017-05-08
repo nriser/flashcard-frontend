@@ -1,9 +1,10 @@
 'use strict'
 // remove signIn and signOut
 const store = require('../store.js')
+// const event = require('./event')
 const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
-// const api = require('./api')
-// const ui = require('./ui')
+const api = require('./api')
+const ui = require('./ui')
 // const cardevent = require('./event.js')
 
 const createFlashcardSuccess = (response) => {
@@ -46,18 +47,45 @@ const getFlashcardsSuccess = (response) => {
   console.log('response is', response)
   store.flashcard = response.flashcard // store the flashcard object in user object (store)
   console.log('store is ', store)
-  console.log('store.flashcard is ', store.flashcard)
+  // console.log('store.flashcard is ', store.flashcard)
   const showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
   $('#view-all').html('') // remove previous results on the page that have been populated using handlebars to avoid redundant content
   $('#view-all').append(showFlashcardsHtml) // first spot in which the elelments are appended to the dom.
+
   // $('#delete-flashcard').on('click', cardevent.onDeleteFlashcard)
-  // $('.deleteBookButton').on('click', onDeleteBook);
+  $('.delete-flashcard').on('click', onDeleteFlashcard)
   // alert('after append in getFlashcardsSuccess')
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
   // $('footer').show()
   $('#view-all').fadeIn()
   $('.content').hide()
+}
+
+const onDeleteFlashcard = function (event) {
+  event.preventDefault()
+  // console.log('you clicked delete')
+  // console.log('event in onDeleteFlashcard is', event)
+  // console.log('event.target in onDeleteFlashcard is ', event.target)
+  // console.log($(event.target).data('id'))
+  // const data = $(event.target).parent().data('id', '{{flashcard.id}}')
+  createDataObject($(event.target).data('id'))
+  $(event.target).parent().fadeOut()
+}
+
+const createDataObject = function (flashcardId) {
+  const data = {
+    flashcard: {
+      id: flashcardId
+    }
+  }
+  event.preventDefault()
+  api.deleteFlashcard(data)
+    .then(() => {
+      api.getFlashcards()
+        .then(ui.getFlashcardsSuccess)
+        .catch(ui.getFlashcardsFailure)
+    })
 }
 
 const getFlashcardsFailure = () => {
@@ -90,5 +118,6 @@ module.exports = {
   updateFlashcardSuccess,
   updateFlashcardFailure,
   deleteFlashcardSuccess,
-  deleteFlashcardFailure
+  deleteFlashcardFailure,
+  onDeleteFlashcard
 }

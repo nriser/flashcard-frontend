@@ -15,7 +15,7 @@
       {{/if}}
     </div> -->
 
-    <div id="card-container" class="card-container">
+    <div id="card-container" class="card-container" data-id="{{flashcard.id}}">
       <div class="card-id" id="card-id">
         Card ID: {{flashcard.id}}
       </div>
@@ -36,6 +36,13 @@
           </div>
         </div>
       </div>
+
+      <button id="delete-flashcard" class="delete-flashcard" data-id="{{flashcard.id}}">
+        <span class="glyphicon glyphicon-trash"></span>
+        Delete
+      </button>
+
+
     </div>
 
   <!--
