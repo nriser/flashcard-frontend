@@ -43,6 +43,7 @@ const getFlashcardFailure = () => {
 }
 
 const getFlashcardsSuccess = (response) => {
+  // $('.delete-flashcard').on('click', onDeleteFlashcard)
   // alert('getFlashcardsSuccess')
   console.log('response is', response)
   store.flashcard = response.flashcard // store the flashcard object in user object (store)
@@ -54,6 +55,7 @@ const getFlashcardsSuccess = (response) => {
 
   // $('#delete-flashcard').on('click', cardevent.onDeleteFlashcard)
   $('.delete-flashcard').on('click', onDeleteFlashcard)
+  // $('.delete-flashcard').off('click')
   // alert('after append in getFlashcardsSuccess')
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
@@ -71,6 +73,7 @@ const onDeleteFlashcard = function (event) {
   // const data = $(event.target).parent().data('id', '{{flashcard.id}}')
   createDataObject($(event.target).data('id'))
   $(event.target).parent().fadeOut()
+  $(event.target).disabled = true
 }
 
 const createDataObject = function (flashcardId) {
@@ -79,13 +82,33 @@ const createDataObject = function (flashcardId) {
       id: flashcardId
     }
   }
+  console.log('data at createDataObjects', data)
+
+  // new code:
   event.preventDefault()
   api.deleteFlashcard(data)
-    .then(() => {
-      api.getFlashcards()
-        .then(ui.getFlashcardsSuccess)
-        .catch(ui.getFlashcardsFailure)
-    })
+    // .then(() => {
+    //   return api.getFlashcards()
+    // })
+    .then(ui.getFlashcardsSuccess)
+    .catch(ui.getFlashcardsFailure)
+
+  // mike's suggested code:
+  // event.preventDefault()
+  // api.deleteFlashcard(data)
+  //   .then(() => {
+  //     return api.getFlashcards() // added a return
+  //   })
+  //   .then(ui.getFlashcardsSuccess)
+  //   .catch(ui.getFlashcardsFailure)
+
+  // my code:
+  // api.deleteFlashcard(data)
+  //   .then(() => {
+  //     api.getFlashcards()
+  //       .then(ui.getFlashcardsSuccess)
+  //       .catch(ui.getFlashcardsFailure)
+  //   })
 }
 
 const getFlashcardsFailure = () => {

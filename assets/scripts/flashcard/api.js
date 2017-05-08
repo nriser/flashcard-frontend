@@ -19,6 +19,7 @@ const createFlashcard = function (data) {
 
 // GET
 const getFlashcard = function (data) {
+  // debugger
   return $.ajax({
     method: 'GET',
     url: config.apiOrigin + '/flashcards/' + data.flashcard.id,
@@ -30,7 +31,6 @@ const getFlashcard = function (data) {
 
 // GET
 const getFlashcards = function () {
-  console.log(`getFlashcards()`)
   return $.ajax({
     method: 'GET',
     url: config.apiOrigin + '/flashcards/',
@@ -56,8 +56,8 @@ const updateFlashcard = function (data) {
 
 // DELETE
 const deleteFlashcard = function (data) {
-  console.log('at delete flashcard, data is', data)
-  console.log('at delete flashcard, data flashcard id is', data.flashcard.id)
+  console.log('at api/deleteFlashcard, data is', data)
+  console.log('at api/deleteFlashcard, data flashcard id is', data.flashcard.id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiOrigin + '/flashcards/' + data.flashcard.id,
