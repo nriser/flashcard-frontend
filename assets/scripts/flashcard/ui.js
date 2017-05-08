@@ -2,6 +2,9 @@
 // remove signIn and signOut
 const store = require('../store.js')
 const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
+// const api = require('./api')
+// const ui = require('./ui')
+// const cardevent = require('./event.js')
 
 const createFlashcardSuccess = (response) => {
   console.log('response ', response)
@@ -23,6 +26,7 @@ const createFlashcardSuccess = (response) => {
 
 const createFlashcardFailure = () => {
   console.log('Something went wrong')
+  $('#delete-flashcard').empty()
   // $('.status-message').text('Please sign in first.')
 }
 
@@ -41,8 +45,10 @@ const getFlashcardsSuccess = (response) => {
   store.flashcard = response.flashcard // store the flashcard object in user object (store)
   console.log('store is ', store)
   console.log('store.flashcard is ', store.flashcard)
-  let showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
+  const showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
+  $('#view-all').html('') // remove previous results on the page that have been populated using handlebars to avoid redundant content
   $('#view-all').append(showFlashcardsHtml) // first spot in which the elelments are appended to the dom.
+  // $('#delete-flashcard').on('click', cardevent.onDeleteFlashcard)
   // $('.deleteBookButton').on('click', onDeleteBook);
   // alert('after append in getFlashcardsSuccess')
   // $('.update-flashcard').show()
