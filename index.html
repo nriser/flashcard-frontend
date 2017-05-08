@@ -116,15 +116,15 @@
       <h2>Ki<span class="red">o</span>ku</h2>
     </header>
 
-    <section id="flashcard-container" class="flashcard-container">
-
+    <div id="flashcard-container" class="flashcard-container">
+      <h3 id="content-status-message" class="content-status-message text-align-center"></h3>
       <!-- <div id="flashcard-container" class="flashcard-container"> -->
 
       <input id="hamburger-checkbox" class="hamburger-checkbox" type="checkbox" name="hamburger-menu"/>
       <label id="hamburger-label" class="hamburger-label" for="hamburger-checkbox"></label>
 
       <aside id="sidebar" class="sidebar">
-        <!-- <h3 id="sidebar-status-message" class="sidebar-status-message text-align-center">Side bar: Create a new card.</h3> -->
+
         <div class="aside-content">
 
           <form id="get-flashcards" class="get-flashcards text-align-center">
@@ -145,7 +145,6 @@
       </aside>
 
       <main id="content" class="content">
-        <h3 id="content-status-message" class="content-status-message text-align-center">Create a new card</h3>
 
         <form id="update-flashcard" class="update-flashcard text-align-center">
           <fieldset>
@@ -177,9 +176,12 @@
         </form>
       </main>
 
-    </section>
+      <main id=view-all-container class="view-all-container">
+        <h3 id="content-status-message" class="content-status-message text-align-center"></h3>
+        <div id="view-all" class="view-all"></div>
+      </main>
 
-    <div id="view-all" class="view-all"></div>
+    </div>
 
   </section>
 

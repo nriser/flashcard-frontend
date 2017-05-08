@@ -58,6 +58,7 @@ const getFlashcardsSuccess = (response) => {
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
   // $('footer').show()
+  $('#content-status-message').text('View Cards')
   $('#view-all').fadeIn()
   $('.content').hide()
 }

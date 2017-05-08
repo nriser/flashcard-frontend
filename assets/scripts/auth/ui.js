@@ -17,7 +17,7 @@ const signUpSuccess = (response) => { // argument can be (response) or something
   $('#view-all').fadeIn()
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
-  $('.status-message').text('You have successfully signed in! Create a new game to play!')
+  // $('.content-status-message').text('Create a new game to play!')
 
   // event.preventDefault() // don't use this or else won't work
   flashcardapi.getFlashcards()
@@ -41,7 +41,7 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('#view-all').fadeIn()
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
-  $('.status-message').text('You have successfully signed in! Create a new game to play!')
+  // $('.content-status-message').text('Create a new game to play!')
 
   // event.preventDefault() // don't use this or else won't work
   flashcardapi.getFlashcards()
