@@ -22,6 +22,8 @@ const createFlashcardSuccess = (response) => {
   // $('.status-message').text('You are playing TicTacToe with Game ID: ' + store.game.id)
   // $('#board').fadeIn()
   // $('#board').css('visibility', 'visible')
+  $('.card-front-text').val('')
+  $('.card-back-text').val('')
 }
 
 const createFlashcardFailure = () => {
