@@ -4,7 +4,7 @@ const flashcardapi = require('../flashcard/api')
 const flashcardui = require('../flashcard/ui')
 
 const store = require('../store.js')
-const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
+// const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
 
 const signUpSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   console.log(response)
@@ -15,6 +15,11 @@ const signUpSuccess = (response) => { // argument can be (response) or something
   $('.flashcard-container-header').show()
   $('footer').fadeIn()
   $('#view-all').fadeIn()
+
+  // if no cards, show below status message
+  // if ($('.card-response').children().length === 0) {
+  //   $('#content-status-message').text('You have no cards. Create a new card.')
+  // }
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
   // $('.content-status-message').text('Create a new game to play!')
@@ -38,6 +43,11 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('.flashcard-container-header').show()
   $('footer').fadeIn()
   $('#view-all').fadeIn()
+  console.log('children length is', $('.card-response').children().length)
+  // if ($('.card-response').children().length === 0) {
+  //   alert('am i here')
+  //   $('#content-status-message').text('You have no cards. Create a new card.')
+  // }
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
   // $('.content-status-message').text('Create a new game to play!')

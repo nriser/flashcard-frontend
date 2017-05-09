@@ -60,7 +60,15 @@ const getFlashcardsSuccess = (response) => {
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
   // $('footer').show()
-  $('#content-status-message').text('View Cards')
+  // $('#content-status-message').text('View Cards')
+
+  // if no cards, show below status message
+  if ($('.card-response').children().length === 0) {
+    $('#content-status-message').text('You have no cards. Click the menu to create a new card.')
+  } else {
+    $('#content-status-message').text('View Cards')
+  }
+
   $('#view-all').fadeIn()
   $('.content').hide()
 }
@@ -73,10 +81,14 @@ const onDeleteFlashcard = function (event) {
   // const data = $(event.target).parent().data('id', '{{flashcard.id}}')
   createDataObject($(event.target).data('id'))
   console.log('what is event.target ', event.target)
-  // debugger
   // disable button because double clicking causes 404 errors
   $(event.target).prop('disabled', true)
   $(event.target).parent().fadeOut()
+  $(event.target).parent().remove()
+  // if no cards, show below status message
+  if ($('.card-response').children().length === 0) {
+    $('#content-status-message').text('You have no cards. Create a new card.')
+  }
 }
 
 const createDataObject = function (flashcardId) {
