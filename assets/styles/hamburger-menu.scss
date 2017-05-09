@@ -62,6 +62,3 @@
 .flashcard-container > input:checked + label:after {
 	transform: rotate(-45deg);
 }
-.flashcard-container > input:hover ~ label {
-	background: rgba(0,0,0,.2);
-}
