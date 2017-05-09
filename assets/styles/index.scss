@@ -8,6 +8,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'header';
 @import 'flashcard-container';
 @import 'all-cards';
+@import 'handlebar.scss';
+@import 'audio';
 @import 'hamburger-menu';
 @import 'sidebar';
 @import 'content';
