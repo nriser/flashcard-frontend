@@ -50,7 +50,8 @@ const getFlashcardsSuccess = (response) => {
   console.log('store is ', store)
   // console.log('store.flashcard is ', store.flashcard)
   const showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
-  $('#view-all').html('') // remove previous results on the page that have been populated using handlebars to avoid redundant content
+  $('#view-all').empty() // use .empty() instead of .html()
+  // $('#view-all').html('') // remove previous results on the page that have been populated using handlebars to avoid redundant content
   $('#view-all').append(showFlashcardsHtml) // first spot in which the elelments are appended to the dom.
 
   // $('#delete-flashcard').on('click', cardevent.onDeleteFlashcard)
