@@ -11,11 +11,13 @@
   <!-- Do not add `script` tags unless you know what you are doing -->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="parallax.js-1.4.2/parallax.js"></script>
 </head>
 
 <body class="container-fluid">
 
-  <header id="header" class="header">
+  <header id="header" class="header parallax-window" data-parallax="scroll" data-image-src="assets/images/study.jpg">
     <div class="auth-modals">
 
       <!-- Trigger the modal with a button -->
@@ -106,10 +108,25 @@
     <div class="hero">
       <h1 id="hero-header" class="hero-header text-align-center">Ki<span class="blur red">o</span>ku</h1>
       <h3 id="header-status-message" class="header-status-message text-align-center">Learn new words the easy way.</h3>
+      <h3 id="scroll-down-message" class="scroll-down-message">Scroll down
+        <div class="glyphicon-hand-down-container">
+          <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
+        </div>
+      </h3>
     </div>
     <!-- <h3 id="header-status-message" class="header-status-message text-align-center">Header: Please sign up. Have an account? Sign in.</h3> -->
 
   </header>
+
+
+<div class="parallax-content-one">
+  Hello helollol
+</div>
+
+<div class="parallax-content-two">
+  Hello helollol
+</div>
+
 
   <section id="flashcard-view" class="flashcard-view">
     <header class="flashcard-container-header">
