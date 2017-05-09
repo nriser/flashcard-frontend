@@ -15,7 +15,8 @@ const signUpSuccess = (response) => { // argument can be (response) or something
   $('.flashcard-container-header').show()
   $('footer').fadeIn()
   $('#view-all').fadeIn()
-
+  // clear form input text upon sign in
+  document.getElementById('sign-up').reset()
   // if no cards, show below status message
   // if ($('.card-response').children().length === 0) {
   //   $('#content-status-message').text('You have no cards. Create a new card.')
@@ -44,6 +45,8 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('footer').fadeIn()
   $('#view-all').fadeIn()
   console.log('children length is', $('.card-response').children().length)
+  // clear form input text upon sign in
+  document.getElementById('sign-in').reset()
   // if ($('.card-response').children().length === 0) {
   //   alert('am i here')
   //   $('#content-status-message').text('You have no cards. Create a new card.')
