@@ -78,14 +78,19 @@ const onDeleteFlashcard = function (event) {
   event.preventDefault()
   // console.log('event in onDeleteFlashcard is', event)
   // console.log('event.target in onDeleteFlashcard is ', event.target)
-  // console.log($(event.target).data('id'))
   // const data = $(event.target).parent().data('id', '{{flashcard.id}}')
   createDataObject($(event.target).data('id'))
-  console.log('what is event.target ', event.target)
   // disable button because double clicking causes 404 errors
   $(event.target).prop('disabled', true)
-  $(event.target).parent().fadeOut()
-  $(event.target).parent().remove()
+  // console.log('this is ', $(this))
+  // console.log('event.target is ', $(event.target))
+  // console.log('event.currentTarget is ', event.currentTarget)
+  // console.log('$(this).parent() ', $(this).parent())
+  // console.log('$(event.target).parent() is ', $(event.target).parent())
+  // console.log('$(event.currentTarget).parent() is', $(event.currentTarget).parent())
+
+  $(event.currentTarget).parent().fadeOut()
+  // $(event.currentTarget).parent().remove()
   // if no cards, show below status message
   if ($('.card-response').children().length === 0) {
     $('#content-status-message').text('You have no cards. Create a new card.')
