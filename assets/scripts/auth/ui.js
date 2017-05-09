@@ -48,6 +48,10 @@ const signInSuccess = (response) => { // argument can be (response) or something
   //   alert('am i here')
   //   $('#content-status-message').text('You have no cards. Create a new card.')
   // }
+  // In case someone clicks 'back' in browser while siebar still open, then goes forward again to the page, and signs in.
+  if ($('input[name=hamburger-menu').is(':checked')) {
+    $('input[name=hamburger-menu]').click()
+  }
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
   // $('.content-status-message').text('Create a new game to play!')
