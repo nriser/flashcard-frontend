@@ -43,6 +43,7 @@ const onClickUpdateButton = function () {
   $('#update-flashcard').fadeIn()
   $('#create-flashcard').hide()
   $('#content-status-message').text('Edit card')
+  $('#view-all').hide()
 }
 
 const onClickCreateButton = function () {
