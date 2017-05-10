@@ -5,15 +5,16 @@
 
 .header {
   // border: 1px solid green;
-  background: #fff url(../images/study.jpg) no-repeat center bottom;
-  background-size: cover;
+  // background: #fff url(../images/study.jpg) no-repeat center bottom;
+  // background-size: cover;
   text-align: center;
-  padding: 20px 20px 0 20px;
+  // padding: 20px 20px 0 20px;
   position: relative;
   // top: 50%;
   // transform: translateY(-50%);
   height: 100%;
   // background-color: #efefef;
+
 }
 
 .hero {
@@ -24,4 +25,14 @@
 
 .hero-header {
   margin-bottom: 40px;
+}
+
+.header-status-message {
+  font-size: 1.7em;
+}
+
+.scroll-down-message {
+  margin-top: 30px;
+  font-size: .8em;
+  text-transform: uppercase;
 }

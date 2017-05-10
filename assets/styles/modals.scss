@@ -7,6 +7,21 @@
   font-size: 1em;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 4px;
+  color: #555555;
+}
+
+.modal-signup {
+  // border: 2px solid green;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal-signin {
+  // border: 2px solid green;
+  position: absolute;
+  top: 20px;
+  right: 150px;
 }
 
 header .modal-btn {

@@ -171,6 +171,21 @@ const deleteFlashcardFailure = () => {
   $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
+
+(function parallaxEffect () {
+  const parallax = document.querySelectorAll('.parallax'),
+    speed = 0.5
+
+  window.onscroll = function () {
+    [].slice.call(parallax).forEach(function (el, i) {
+      const windowYOffset = window.pageYOffset,
+        elBackgrounPos = '0% ' + (windowYOffset * speed) + 'px'
+
+      el.style.backgroundPosition = elBackgrounPos
+    })
+  }
+})()
+
 module.exports = {
   createFlashcardSuccess,
   createFlashcardFailure,
