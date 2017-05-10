@@ -39,30 +39,35 @@ const onGetFlashcards = function (event) {
 }
 
 const onClickUpdateButton = function () {
-  $('.content').fadeIn()
   $('#create-flashcard').hide()
-  $('#view-all').hide()
 
-  if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
-    $('#update-flashcard').fadeIn()
-    $('#content-status-message').text('Edit card')
-  } else if ($('.card-response').children().length === 0) {
-    $('#update-flashcard').hide()
-    $('#content-status-message').text('Please create a card first.')
-  } else {
-    $('#update-flashcard').fadeIn()
-    $('#content-status-message').text('Edit card')
-  }
-  // else {
-  //   $('#update-card-button').prop('disabled', false)
+  $('.content').fadeIn()
+  $('#update-flashcard').fadeIn()
+
+  $('#view-all').hide()
+  $('#content-status-message').text('Edit card')
+  // $('.content').fadeIn()
+  // $('#create-flashcard').hide()
+  // $('#view-all').hide()
+
+  // if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
   //   $('#update-flashcard').fadeIn()
+  //   $('#content-status-message').text('Edit card')
+  // } else if ($('.card-response').children().length === 0) {
+  //   $('#update-flashcard').hide()
+  //   $('#content-status-message').text('Please create a card first.')
+  // } else {
+  //   $('#update-flashcard').fadeIn()
+  //   $('#content-status-message').text('Edit card')
   // }
 }
 
 const onClickCreateButton = function () {
   $('#update-flashcard').hide()
+
   $('.content').fadeIn()
   $('#create-flashcard').fadeIn()
+
   $('#view-all').hide()
   $('#content-status-message').text('Create a new card')
 }
