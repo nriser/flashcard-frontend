@@ -47,10 +47,10 @@ const onClickUpdateButton = function () {
     $('#update-flashcard').fadeIn()
     $('#content-status-message').text('Edit card')
   } else if ($('.card-response').children().length === 0) {
-    alert('where am i')
     $('#update-flashcard').hide()
     $('#content-status-message').text('Please create a card first.')
   } else {
+    $('#update-flashcard').fadeIn()
     $('#content-status-message').text('Edit card')
   }
   // else {
