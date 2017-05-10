@@ -1,9 +1,9 @@
-# TicTacToe game built by Nikki Riser
+# Flashcard App built by Nikki Riser
 
-Link to the deployed flashcard app: https://nriser.github.io/flashcard-frontend/
-Link to the flashcard API repo: https://github.com/nriser/flashcard-api
+Link to the backend API repo: https://github.com/nriser/flashcard-api
+Link to the frontend repo: https://github.com/nriser/flashcard-frontend
 Link to the deployed API: https://kiokuflashcards.herokuapp.com/
-
+Link to the deployed flashcard app: https://nriser.github.io/flashcard-frontend/
 
 ## Technologies used
 
@@ -24,7 +24,7 @@ Link to the deployed API: https://kiokuflashcards.herokuapp.com/
 I came up with the idea of building a Japanese/English language flashcard web app because this app would be a good starting point for a
 Japanese/English dictionary app that I would like to build in the future. Before joining GA, I found a set of data made public that consists of Japanese words/phrases matched with definitions in English and Japanese and imported it into a database I built in MySQL, but had difficulty representing Japanese unicode characters. I decided to take this opportunity to work on a project that allows me to work on overcoming this difficulty so that I could apply what I learn onto my future project. As for this flashcard app, the vision is to have it be used by people who would like to memorize Japanese words and short phrases via repetition.
 
-In building this game, I followed the recommended schedule provided by the General Assembly consultants. I started with making a wireframe, and then proceeded on to making user stories, which allowed me to think in a user's perspective. I initially built the app with simple buttons and forms that would allow me to test out the ajax calls to the API later on. Moving on to the backend, I built my database, tables, and relationships between the user and flashcard resources. Once I finished building my backend, I revisited the frontend and started building the code to ping the API and receive data back.
+In building this app, I followed the recommended schedule provided by the General Assembly consultants. I started with making a wireframe, and then proceeded on to making user stories, which allowed me to think in a user's perspective. I initially built the app with simple buttons and forms that would allow me to test out the ajax calls to the API later on. Moving on to the backend, I built my database, tables, and relationships between the user and flashcard resources. Once I finished building my backend, I revisited the frontend and started building the code to ping the API and receive data back.
 
 I had the most trouble with Rails API, especially understanding the path that the server takes to return a response back to a client. What helped me a lot during the development process was to use console.log and 'debugger' at every step of the code in order to pinpoint where exactly I am getting the error responses, and to check what data is being returned at each stage. This strategy has helped me immensely throughout the development process.
 
