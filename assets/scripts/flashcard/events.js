@@ -11,9 +11,7 @@ $('#modal-changepw').appendTo('body')
 
 const onCreateFlashcard = function (event) {
   event.preventDefault()
-  console.log('you clicked create')
   const data = getFormFields(this)
-  console.log('data after getting form fields', data)
   api.createFlashcard(data)
     .then(ui.createFlashcardSuccess)
     .catch(ui.createFlashcardFailure)
@@ -21,9 +19,7 @@ const onCreateFlashcard = function (event) {
 
 // const onGetFlashcard = function (event) {
 //   event.preventDefault()
-//   console.log('you clicked get')
 //   const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
-//   console.log('data after getting form fields', data)
 //   api.getFlashcard(data)
 //     .then(ui.getFlashcardSuccess)
 //     .catch(ui.getFlashcardFailure)
@@ -31,8 +27,6 @@ const onCreateFlashcard = function (event) {
 
 const onGetFlashcards = function (event) {
   event.preventDefault()
-  console.log('you clicked get all')
-  // alert('onGetFlashcards')
   api.getFlashcards()
     .then(ui.getFlashcardsSuccess)
     .catch(ui.getFlashcardsFailure)
@@ -89,9 +83,7 @@ const onClickCreateButton = function () {
 
 const onUpdateFlashcard = function (event) {
   event.preventDefault()
-  console.log('you clicked update')
   const data = getFormFields(this)
-  console.log('data after getting form fields', data)
   api.updateFlashcard(data)
     .then(ui.updateFlashcardSuccess)
     .catch(ui.updateFlashcardFailure)

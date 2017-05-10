@@ -5,8 +5,6 @@ const store = require('../store.js')
 
 // CREATE
 const createFlashcard = function (data) {
-  console.log('at create flashcard, data is', data)
-  console.log('at create flashcard, store is', store)
   return $.ajax({
     method: 'POST',
     url: config.apiOrigin + '/flashcards/',
@@ -19,7 +17,6 @@ const createFlashcard = function (data) {
 
 // // GET
 // const getFlashcard = function (data) {
-//   // debugger
 //   return $.ajax({
 //     method: 'GET',
 //     url: config.apiOrigin + '/flashcards/' + data.flashcard.id,
@@ -42,8 +39,6 @@ const getFlashcards = function () {
 
 // PATCH
 const updateFlashcard = function (data) {
-  console.log('at update flashcard, data is', data)
-  console.log('at update flashcard, data flashcard id is', data.flashcard.id)
   return $.ajax({
     method: 'PATCH',
     url: config.apiOrigin + '/flashcards/' + data.flashcard.id,
@@ -56,8 +51,6 @@ const updateFlashcard = function (data) {
 
 // DELETE
 const deleteFlashcard = function (data) {
-  console.log('at api/deleteFlashcard, data is', data)
-  console.log('at api/deleteFlashcard, data flashcard id is', data.flashcard.id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiOrigin + '/flashcards/' + data.flashcard.id,

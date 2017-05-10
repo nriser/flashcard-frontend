@@ -8,12 +8,6 @@ const ui = require('./ui')
 // const cardevent = require('./event.js')
 
 const createFlashcardSuccess = (response) => {
-  console.log('response ', response)
-  console.log('response.flashcard ', response.flashcard)
-  console.log('response.flashcard.word ', response.flashcard.word)
-  console.log('response.flashcard.definition ', response.flashcard.definition)
-  console.log('response.flashcard.id ', response.flashcard.id)
-  console.log('store ', store)
   $('#content-status-message').text('Card added to deck successfully (ID: ' + response.flashcard.id + ' )')
   // store.flashcard = response.flashcard
   // $('#show-game-container').hide()
@@ -27,33 +21,25 @@ const createFlashcardSuccess = (response) => {
   // reset form fields
   $('.create-front-text').val('')
   $('.create-back-text').val('')
-  // alert('helloooo')
   // $('#update-flashcard').fadeIn()
   api.getFlashcards()
 }
 
 const createFlashcardFailure = () => {
-  console.log('Something went wrong')
   $('#delete-flashcard').empty()
   $('#content-status-message').text('Please enter a word and a definition.')
 }
 
 // const getFlashcardSuccess = (response) => {
-//   console.log('response is', response)
 //   // store.flashcard = response.flashcard
 // }
 //
 // const getFlashcardFailure = () => {
-//   console.log('Something went wront')
 // }
 
 const getFlashcardsSuccess = (response) => {
   // $('.delete-flashcard').on('click', onDeleteFlashcard)
-  // alert('getFlashcardsSuccess')
-  console.log('response is', response)
   store.flashcard = response.flashcard // store the flashcard object in user object (store)
-  console.log('store is ', store)
-  // console.log('store.flashcard is ', store.flashcard)
   const showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
   $('#view-all').empty() // use .empty() instead of .html()
   // $('#view-all').html('') // remove previous results on the page that have been populated using handlebars to avoid redundant content
@@ -62,7 +48,6 @@ const getFlashcardsSuccess = (response) => {
   // $('#delete-flashcard').on('click', cardevent.onDeleteFlashcard)
   $('.delete-flashcard').on('click', onDeleteFlashcard)
   // $('.delete-flashcard').off('click')
-  // alert('after append in getFlashcardsSuccess')
   // $('.update-flashcard').show()
   // $('.flashcard-container-header').show()
   // $('footer').show()
@@ -83,24 +68,15 @@ const getFlashcardsSuccess = (response) => {
 }
 
 const getFlashcardsFailure = () => {
-  console.log('Something went wrong')
   $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
 const onDeleteFlashcard = function (event) {
   event.preventDefault()
-  // console.log('event in onDeleteFlashcard is', event)
-  // console.log('event.target in onDeleteFlashcard is ', event.target)
   // const data = $(event.target).parent().data('id', '{{flashcard.id}}')
   createDataObject($(event.target).data('id'))
   // disable button because double clicking causes 404 errors
   $(event.target).prop('disabled', true)
-  // console.log('this is ', $(this))
-  // console.log('event.target is ', $(event.target))
-  // console.log('event.currentTarget is ', event.currentTarget)
-  // console.log('$(this).parent() ', $(this).parent())
-  // console.log('$(event.target).parent() is ', $(event.target).parent())
-  // console.log('$(event.currentTarget).parent() is', $(event.currentTarget).parent())
 
   $(event.currentTarget).parent().fadeOut()
   // Wait for fade-out effect to occur before .remove
@@ -120,7 +96,6 @@ const createDataObject = function (flashcardId) {
       id: flashcardId
     }
   }
-  console.log('data at createDataObjects', data)
 
   // new code:
   event.preventDefault()
@@ -150,7 +125,6 @@ const createDataObject = function (flashcardId) {
 }
 
 const updateFlashcardSuccess = (response) => {
-  console.log('response is', response)
   $('#content-status-message').text('Card updated successfully')
   // reset form fields
   $('.card-id-update').val('')
@@ -163,7 +137,6 @@ const updateFlashcardFailure = () => {
 }
 
 const deleteFlashcardSuccess = (response) => {
-  console.log('response is', response)
   // $('#content-status-message').text('Card updated successfully')
 }
 

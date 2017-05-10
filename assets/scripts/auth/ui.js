@@ -8,7 +8,6 @@ const store = require('../store.js')
 
 const signUpSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   $('.signup-status-message').text('Successfully signed up. Please wait for page to load.')
-  console.log(response)
   $('#modal-signup').modal('hide')
   $('.header').hide()
   // $('#update-flashcard').hide()
@@ -38,7 +37,6 @@ const signUpFailure = () => {
 
 const signInSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   $('.signin-status-message').text('Successfully signed in. Please wait for page to load.')
-  console.log(response)
   $('#modal-signin').modal('hide')
   $('.header').hide()
   // $('#update-flashcard').hide()
@@ -46,11 +44,9 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('.flashcard-container-header').show()
   $('footer').fadeIn()
   $('#view-all').fadeIn()
-  console.log('children length is', $('.card-response').children().length)
   // clear form input text upon sign in
   document.getElementById('sign-in').reset()
   // if ($('.card-response').children().length === 0) {
-  //   alert('am i here')
   //   $('#content-status-message').text('You have no cards. Create a new card.')
   // }
   // In case someone clicks 'back' in browser while siebar still open, then goes forward again to the page, and signs in.
@@ -72,7 +68,6 @@ const signInFailure = () => {
 }
 
 const changePasswordSuccess = (response) => {
-  console.log(response)
   $('.change-pw-status-message').text('Password changed successfully.')
 }
 
