@@ -87,6 +87,8 @@ const signOutSuccess = () => {
   $('.flashcard-container-header').hide()
   $('footer').hide()
   $('#view-all').hide()
+  document.getElementById('change-password').reset()
+  $('.change-pw-status-message').text('')
 
   if ($('input[name=hamburger-menu').is(':checked')) {
     $('input[name=hamburger-menu]').click()

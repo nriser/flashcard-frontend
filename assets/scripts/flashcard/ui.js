@@ -77,6 +77,9 @@ const getFlashcardsSuccess = (response) => {
 
   $('#view-all').fadeIn()
   $('.content').hide()
+
+  $('.signup-status-message').text('')
+  $('.signin-status-message').text('')
 }
 
 const getFlashcardsFailure = () => {

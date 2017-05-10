@@ -40,6 +40,9 @@ const onGetFlashcards = function (event) {
   $('.card-id-update').val('')
   $('.card-front-text').val('')
   $('.card-back-text').val('')
+  //
+  // $('.signup-status-message').text('')
+  // $('.signin-status-message').text('')
 }
 
 const onClickUpdateButton = function () {
