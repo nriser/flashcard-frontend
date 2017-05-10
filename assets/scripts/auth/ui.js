@@ -71,11 +71,11 @@ const signInFailure = () => {
 
 const changePasswordSuccess = (response) => {
   console.log(response)
-  $('.status-message').text('You have succesfully changed your password!')
+  $('.change-pw-status-message').text('Password changed successfully.')
 }
 
 const changePasswordFailure = () => {
-  $('.status-message').text('Incorrect password. Please try again.')
+  $('.change-pw-status-message').text('Incorrect password. Please try again.')
 }
 
 const signOutSuccess = () => {

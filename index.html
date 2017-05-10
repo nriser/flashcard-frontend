@@ -41,7 +41,7 @@
                   <!-- name matters. Our object is made to look like what we see in sign-uo.sh  -->
                   <input type="password" name="credentials[password]" placeholder="password">
                   <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
-                  <input type="submit" name="submit" value="Sign up">
+                  <input type="submit" name="submit" value="Submit">
                 </fieldset>
               </form>
             </div>
@@ -84,7 +84,7 @@
                   <input type="text" name="credentials[email]" placeholder="email">
                   <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
                   <input type="password" name="credentials[password]" placeholder="password">
-                  <input type="submit" name="submit" value="Sign in">
+                  <input type="submit" name="submit" value="Submit">
                 </fieldset>
               </form>
             </div>
@@ -227,12 +227,14 @@
                   <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
                   <input type="password" name="passwords[new]" placeholder="new password">
                   <!-- what will our object look like at this point? see notes (1)-->
-                  <input type="submit" name="submit" value="Change password">
+                  <input type="submit" name="submit" value="Submit">
                 </fieldset>
               </form>
             </div>
+
             <!-- Modal footer-->
             <div class="modal-footer">
+              <p id="change-pw-status-message" class="change-pw-status-message text-align-center"></p>
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
