@@ -23,8 +23,10 @@ const createFlashcardSuccess = (response) => {
   // $('.status-message').text('You are playing TicTacToe with Game ID: ' + store.game.id)
   // $('#board').fadeIn()
   // $('#board').css('visibility', 'visible')
-  $('.card-front-text').val('')
-  $('.card-back-text').val('')
+
+  // reset form fields
+  $('.create-front-text').val('')
+  $('.create-back-text').val('')
   // alert('helloooo')
   // $('#update-flashcard').fadeIn()
   api.getFlashcards()
@@ -146,6 +148,10 @@ const getFlashcardsFailure = () => {
 const updateFlashcardSuccess = (response) => {
   console.log('response is', response)
   $('#content-status-message').text('Card updated successfully')
+  // reset form fields
+  $('.card-id-update').val('')
+  $('.update-front-text').val('')
+  $('.update-back-text').val('')
 }
 
 const updateFlashcardFailure = () => {
