@@ -19,15 +19,15 @@ const onCreateFlashcard = function (event) {
     .catch(ui.createFlashcardFailure)
 }
 
-const onGetFlashcard = function (event) {
-  event.preventDefault()
-  console.log('you clicked get')
-  const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
-  console.log('data after getting form fields', data)
-  api.getFlashcard(data)
-    .then(ui.getFlashcardSuccess)
-    .catch(ui.getFlashcardFailure)
-}
+// const onGetFlashcard = function (event) {
+//   event.preventDefault()
+//   console.log('you clicked get')
+//   const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
+//   console.log('data after getting form fields', data)
+//   api.getFlashcard(data)
+//     .then(ui.getFlashcardSuccess)
+//     .catch(ui.getFlashcardFailure)
+// }
 
 const onGetFlashcards = function (event) {
   event.preventDefault()
@@ -36,6 +36,10 @@ const onGetFlashcards = function (event) {
   api.getFlashcards()
     .then(ui.getFlashcardsSuccess)
     .catch(ui.getFlashcardsFailure)
+
+  $('.card-id-update').val('')
+  $('.card-front-text').val('')
+  $('.card-back-text').val('')
 }
 
 const onClickUpdateButton = function () {
@@ -46,6 +50,10 @@ const onClickUpdateButton = function () {
 
   $('#view-all').hide()
   $('#content-status-message').text('Edit card')
+
+  $('.card-id-update').val('')
+  $('.card-front-text').val('')
+  $('.card-back-text').val('')
   // $('.content').fadeIn()
   // $('#create-flashcard').hide()
   // $('#view-all').hide()
@@ -70,6 +78,10 @@ const onClickCreateButton = function () {
 
   $('#view-all').hide()
   $('#content-status-message').text('Create a new card')
+
+  $('.card-id-update').val('')
+  $('.card-front-text').val('')
+  $('.card-back-text').val('')
 }
 
 const onUpdateFlashcard = function (event) {
@@ -84,7 +96,7 @@ const onUpdateFlashcard = function (event) {
 
 const addFlashcardHandlers = () => {
   $('#create-flashcard').on('submit', onCreateFlashcard)
-  $('#get-flashcard').on('submit', onGetFlashcard)
+  // $('#get-flashcard').on('submit', onGetFlashcard)
   $('#get-flashcards').on('submit', onGetFlashcards)
   $('#update-flashcard').on('submit', onUpdateFlashcard)
   $('#update-card-button').on('click', onClickUpdateButton)
