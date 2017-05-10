@@ -31,8 +31,128 @@
   font-size: 1.7em;
 }
 
+.glyphicon-hand-down {
+  font-size: 50px;
+  margin-top: 60px;
+  animation: bounce 2s infinite;
+}
+
 .scroll-down-message {
   margin-top: 30px;
   font-size: .8em;
   text-transform: uppercase;
+}
+
+.action-content-container {
+  width: 100%;
+  background-color: transparent;
+}
+
+/* ==============================
+PARALLAX
+============================== */
+
+// PRIMARY STRUCTURE
+
+.action-content-container {
+  max-width: 960px;
+  margin: 0 auto;
+  height: auto;
+  background-color: transparent;
+}
+
+// SECTIONS
+
+.module:last-child {
+  margin-bottom: 0;
+  padding: 100px;
+}
+.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.module p:last-child {
+  margin-bottom: 0;
+}
+.module.content {
+  padding: 40px 0;
+}
+.module.parallax {
+  padding: 240px 0;
+  background-position: 0 0;
+}
+.module.parallax h1 {
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px white;
+}
+.module.parallax-1 {
+  background-image: url(../images/study3.jpg);
+}
+
+@media all and (min-width: 600px) {
+  .module h2 {
+    font-size: 42px;
+  }
+  .module p {
+    font-size: 20px;
+  }
+  .module.parallax {
+    padding: 200px 0;
+  }
+  .module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  .module.parallax h1 {
+    font-size: 160px;
+  }
+}
+
+/* ==============================
+END PARALLAX
+============================== */
+
+
+.action-content {
+
+}
+
+.action-content .how-to {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 80px;
+}
+
+.action-content-container .glyphicon {
+  font-size: 60px;
+  padding: 20px;
+  margin-bottom: 30px;
+  color: #D64947;
+}
+
+.action-content-container .first-step {
+  margin: auto;
+  margin-bottom: 100px;
+  max-width: 600px;
+}
+
+.action-content-container .second-step {
+  margin: auto;
+  margin-bottom: 100px;
+  max-width: 600px;
+}
+
+.action-content-container .third-step {
+  // margin-bottom: 100px;
 }
