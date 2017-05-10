@@ -7,21 +7,50 @@
   font-size: 1em;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 4px;
-  color: #555555;
+  // color: #555555;
 }
 
-.modal-signup {
+.modal-signup-button {
   // border: 2px solid green;
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.modal-signin {
+.modal-signin-button {
   // border: 2px solid green;
   position: absolute;
   top: 20px;
   right: 150px;
+}
+
+.modal-signin input[type="submit"],
+.modal-signup input[type="submit"],
+.modal-changepw input[type="submit"] {
+  margin-top: 15px;
+  background-color: #D64947;
+  border: 0;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-size: 1em;
+  text-decoration: none;
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  // color: #fff;
+  // border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 30px;
+  // transition: background-color .5s;
+  transition: color .5s;
+  // transition: border .5s;
+  text-transform: uppercase;
+  text-align: center;
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+
+.signin-status-message, .signup-status-message {
+  text-align: center;
 }
 
 header .modal-btn {
@@ -29,11 +58,18 @@ header .modal-btn {
 }
 
 header .modal-btn:hover {
-  color: red;
+  color: #D64947;
 }
 
 footer .modal-btn {
   letter-spacing: 1px;
+  color: #fff;
+  transition: color .5s;
+}
+
+footer .modal-btn:hover {
+  letter-spacing: 1px;
+  color: #606060;
 }
 
 

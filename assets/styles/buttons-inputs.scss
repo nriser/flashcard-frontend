@@ -17,6 +17,10 @@ input[type="text"], input[type="password"] {
   padding: 8px 30px;
 	border: 1px solid #606060;
   text-align: center;
+  display: block;
+  margin: 10px;
+  margin: 10px auto;
+  width: 70%;
 }
 
 input[type="submit"] {
@@ -40,21 +44,12 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-	color: red;
+	color: #606060;
 }
 
 // remove browser default: yellow background color
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-color: transparent;
-}
-
-
-.sidebar input[type="submit"] {
-  color: #fff;
-}
-
-.sidebar input[type="submit"]:hover {
-
 }
 
 .sidebar .get-flashcard input[type="submit"] {
