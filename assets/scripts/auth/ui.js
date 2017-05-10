@@ -93,6 +93,10 @@ const signOutSuccess = () => {
   if ($('input[name=hamburger-menu').is(':checked')) {
     $('input[name=hamburger-menu]').click()
   }
+  // scroll back to top of landing page upon successful signout
+  $(document).ready(function () {
+    window.scrollTo(0, 0)
+  })
 
   store.user = null // only have one person signed in in a givne session, one browser
 }
