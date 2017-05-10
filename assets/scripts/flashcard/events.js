@@ -40,10 +40,23 @@ const onGetFlashcards = function (event) {
 
 const onClickUpdateButton = function () {
   $('.content').fadeIn()
-  $('#update-flashcard').fadeIn()
   $('#create-flashcard').hide()
-  $('#content-status-message').text('Edit card')
   $('#view-all').hide()
+
+  if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
+    $('#update-flashcard').fadeIn()
+    $('#content-status-message').text('Edit card')
+  } else if ($('.card-response').children().length === 0) {
+    alert('where am i')
+    $('#update-flashcard').hide()
+    $('#content-status-message').text('Please create a card first.')
+  } else {
+    $('#content-status-message').text('Edit card')
+  }
+  // else {
+  //   $('#update-card-button').prop('disabled', false)
+  //   $('#update-flashcard').fadeIn()
+  // }
 }
 
 const onClickCreateButton = function () {

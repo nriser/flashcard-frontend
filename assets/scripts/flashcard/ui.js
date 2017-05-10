@@ -25,6 +25,9 @@ const createFlashcardSuccess = (response) => {
   // $('#board').css('visibility', 'visible')
   $('.card-front-text').val('')
   $('.card-back-text').val('')
+  // alert('helloooo')
+  // $('#update-flashcard').fadeIn()
+  api.getFlashcards()
 }
 
 const createFlashcardFailure = () => {
