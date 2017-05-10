@@ -7,6 +7,7 @@ const store = require('../store.js')
 // const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
 
 const signUpSuccess = (response) => { // argument can be (response) or something too. Just an argument name
+  $('.signup-status-message').text('Successfully signed up. Please wait for page to load.')
   console.log(response)
   $('#modal-signup').modal('hide')
   $('.header').hide()
@@ -32,10 +33,11 @@ const signUpSuccess = (response) => { // argument can be (response) or something
 }
 
 const signUpFailure = () => {
-  $('.status-message').text('Either email already exists or the passwords did not match. Please try again.')
+  $('.signup-status-message').text('Username taken or the passwords do not match. Please try again.')
 }
 
 const signInSuccess = (response) => { // argument can be (response) or something too. Just an argument name
+  $('.signin-status-message').text('Successfully signed in. Please wait for page to load.')
   console.log(response)
   $('#modal-signin').modal('hide')
   $('.header').hide()
@@ -66,7 +68,7 @@ const signInSuccess = (response) => { // argument can be (response) or something
 }
 
 const signInFailure = () => {
-  $('.status-message').text('Wrong username and or password.')
+  $('.signin-status-message').text('Wrong username and or password.')
 }
 
 const changePasswordSuccess = (response) => {
@@ -75,7 +77,7 @@ const changePasswordSuccess = (response) => {
 }
 
 const changePasswordFailure = () => {
-  $('.change-pw-status-message').text('Incorrect password. Please try again.')
+  $('.change-pw-status-message').text('Password could not be changed. Please try again.')
 }
 
 const signOutSuccess = () => {
