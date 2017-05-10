@@ -1,9 +1,6 @@
 .sidebar {
   position: fixed;
   right: 0; /* to make it go from right to left instead of default left to right */
-  // top: 45px;
-  // height: 2000px;
-  // border: 2px solid blue;
   overflow: hidden;
   margin-top: 0px;
   list-style-type: none;
@@ -16,7 +13,6 @@
 }
 
 .sidebar-status-message {
-  // border: 2px solid blue;
   padding: 30px 0 30px 0;
   margin: 30px 0 30px 0;
 }
@@ -25,7 +21,6 @@
   vertical-align: top;
   margin: 50px 0;
   height: 400px;
-  // border: 3px solid yellow;
   display: flex;
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */

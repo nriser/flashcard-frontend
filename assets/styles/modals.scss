@@ -7,18 +7,15 @@
   font-size: 1em;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 4px;
-  // color: #555555;
 }
 
 .modal-signup-button {
-  // border: 2px solid green;
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
 .modal-signin-button {
-  // border: 2px solid green;
   position: absolute;
   top: 20px;
   right: 150px;
@@ -34,14 +31,9 @@
   letter-spacing: 4px;
   font-size: 1em;
   text-decoration: none;
-  // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  // color: #fff;
-  // border: 1px solid #fff;
   color: #fff;
   padding: 8px 30px;
-  // transition: background-color .5s;
   transition: color .5s;
-  // transition: border .5s;
   text-transform: uppercase;
   text-align: center;
   width: 70%;
@@ -71,9 +63,3 @@ footer .modal-btn:hover {
   letter-spacing: 1px;
   color: #606060;
 }
-
-
-//
-// header .modal-btn {
-//   color: black;
-// }

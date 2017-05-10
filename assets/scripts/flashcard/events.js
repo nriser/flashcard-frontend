@@ -17,6 +17,7 @@ const onCreateFlashcard = function (event) {
     .catch(ui.createFlashcardFailure)
 }
 
+// keep this for later
 // const onGetFlashcard = function (event) {
 //   event.preventDefault()
 //   const data = getFormFields(this) // this will refer to event.target because it gets passed into addHandlers as a callback.
@@ -34,9 +35,6 @@ const onGetFlashcards = function (event) {
   $('.card-id-update').val('')
   $('.card-front-text').val('')
   $('.card-back-text').val('')
-  //
-  // $('.signup-status-message').text('')
-  // $('.signin-status-message').text('')
 }
 
 const onClickUpdateButton = function () {
@@ -44,7 +42,6 @@ const onClickUpdateButton = function () {
 
   $('.content').fadeIn()
   $('#update-flashcard').fadeIn()
-  // $('.view-all').fadeOut()
 
   $('#view-all').hide()
   $('#content-status-message').text('Edit existing card')
@@ -52,32 +49,6 @@ const onClickUpdateButton = function () {
   $('.card-id-update').val('')
   $('.card-front-text').val('')
   $('.card-back-text').val('')
-
-  // $('.content').fadeIn()
-  // $('#create-flashcard').hide()
-  // $('#view-all').hide()
-  //
-  // if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
-  //   // $('#update-flashcard').fadeIn()
-  //   $('#content-status-message').text('Edit card')
-  // } else if ($('.card-response').children().length === 0) {
-  //   // $('#update-flashcard').hide()
-  //   $('#content-status-message').text('Please create a card first.')
-  // } else {
-  //   // $('#update-flashcard').fadeIn()
-  //   $('#content-status-message').text('Edit card')
-  // }
-
-  // if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
-  //   $('#update-flashcard').fadeIn()
-  //   $('#content-status-message').text('Edit card')
-  // } else if ($('.card-response').children().length === 0) {
-  //   $('#update-flashcard').hide()
-  //   $('#content-status-message').text('Please create a card first.')
-  // } else {
-  //   $('#update-flashcard').fadeIn()
-  //   $('#content-status-message').text('Edit card')
-  // }
 }
 
 const onClickCreateButton = function () {

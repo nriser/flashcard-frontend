@@ -1,5 +1,4 @@
 footer {
-  // border: 2px solid green;
   padding: 0 20px;
   height: 5%;
   background-color: #D64947;
@@ -13,7 +12,6 @@ footer {
 footer .footer-modals {
   font-size: .9em;
   color: #fff;
-  // border: 2px solid blue;
   display: flex;
   display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -28,8 +26,6 @@ footer .footer-modals {
 }
 
 footer .footer-message {
-  // border: 2px solid yellow;
-  // display: block;
   margin: auto;
   position: absolute;
   top: 25%;

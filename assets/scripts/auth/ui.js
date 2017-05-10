@@ -4,7 +4,6 @@ const flashcardapi = require('../flashcard/api')
 const flashcardui = require('../flashcard/ui')
 
 const store = require('../store.js')
-// const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
 
 const signUpSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   $('.signup-status-message').text('Successfully signed up. Please wait for page to load.')
@@ -17,13 +16,8 @@ const signUpSuccess = (response) => { // argument can be (response) or something
   $('#view-all').fadeIn()
   // clear form input text upon sign in
   document.getElementById('sign-up').reset()
-  // if no cards, show below status message
-  // if ($('.card-response').children().length === 0) {
-  //   $('#content-status-message').text('You have no cards. Create a new card.')
-  // }
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
-  // $('.content-status-message').text('Create a new game to play!')
 
   // event.preventDefault() // don't use this or else won't work
   flashcardapi.getFlashcards()
@@ -39,25 +33,20 @@ const signInSuccess = (response) => { // argument can be (response) or something
   $('.signin-status-message').text('Successfully signed in. Please wait for page to load.')
   $('#modal-signin').modal('hide')
   $('.header').hide()
-  // $('#update-flashcard').hide()
   $('.flashcard-container').fadeIn()
   $('.flashcard-container-header').show()
   $('footer').fadeIn()
   $('#view-all').fadeIn()
   // clear form input text upon sign in
   document.getElementById('sign-in').reset()
-  // if ($('.card-response').children().length === 0) {
-  //   $('#content-status-message').text('You have no cards. Create a new card.')
-  // }
   // In case someone clicks 'back' in browser while siebar still open, then goes forward again to the page, and signs in.
   if ($('input[name=hamburger-menu').is(':checked')) {
     $('input[name=hamburger-menu]').click()
   }
 
   store.user = response.user // response.user is the email id and token // stores whatever that was in that response
-  // $('.content-status-message').text('Create a new game to play!')
 
-  // event.preventDefault() // don't use this or else won't work
+  // don't use event.preventDefault() or else won't work
   flashcardapi.getFlashcards()
     .then(flashcardui.getFlashcardsSuccess)
     .catch(flashcardui.getFlashcardsFailure)
@@ -76,7 +65,6 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccess = () => {
-  // $('.status-message').text('You have successfully signed out!')
   $('.header').fadeIn()
   $('.flashcard-container').hide()
   $('.flashcard-container-header').hide()

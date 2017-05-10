@@ -1,10 +1,4 @@
-.view-all {
-  // border: 5px solid pink
-  // padding-top: 250px
-}
-
 .card-response {
-  // border: 5px solid yellow;
   margin: auto;
   padding-bottom: 200px;
   width: 90%;
@@ -22,23 +16,9 @@
   -webkit-flex-flow: row wrap;
   align-content: space-between;
   flex-flow: row wrap;
-  // display: inline-block;
-}
-// .card-response::after {
-// 	content:'';
-// 	display: block;
-// 	clear: both;
-// }
-
-.card-container {
-    // margin-bottom: 80px;
 }
 
 .flip-container {
-  // border: 2px solid green;
-  // max-width: 100px;
-  // margin: auto;
-
   /* entire container, keeps perspective */
   perspective: 1000px;
   height: 14em;
@@ -47,7 +27,6 @@
 
 .flip-front {
   box-shadow: 1px 1px 3px rgba(0,0,0,.25);
-  // margin: auto;
   position: relative;
   background-color: #fff;
   border: none;

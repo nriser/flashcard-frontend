@@ -15,6 +15,7 @@ const createFlashcard = function (data) {
   })
 }
 
+// keep this for later
 // // GET
 // const getFlashcard = function (data) {
 //   return $.ajax({

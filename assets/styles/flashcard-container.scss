@@ -1,7 +1,5 @@
 .flashcard-view {
   position: relative;
-  // height: 100%;
-  // background-color: #F4F4EF;
 }
 
 .flashcard-container-header {
@@ -12,37 +10,12 @@
   display: none;
   height: 7%;
   background-color: rgba(25,50,50,1);
-  // text-align: left;
-  // height: auto;
 }
 
-
-// .flashcard-container-header.hide {
-//   border: 2px solid pink;
-// }
-
-
 .flashcard-container {
-  // background-color: #F4F4EF;
   position: relative;
   display: none;
-  /*border: 1px solid purple;*/
   width: 100%;
-  // height: 100%;
-  // height: 1000px;
-  /*display: flex;
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	// display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	// display: -ms-flexbox;      /* TWEENER - IE 10 */
-	// display: -webkit-flex;     /* NEW - Chrome */
-	// flex-direction: row;
-	// -webkit-flex-direction: row;
-	// -moz-flex-direction: row;
-	// justify-content: space-between;
-	// -webkit-justify-content: space-between;
-	// -moz-justify-content: space-between;
-	// align-items: center;
-	// -webkit-align-items: center;*/
 }
 
 .flashcard-container-header > h2 {
@@ -54,6 +27,4 @@
   font-weight: 500;
   top: 50%;
   transform: translateY(-50%);
-  // transform: scaleY(-50%);
-  // background-color: rgb(10, 50, 50);
 }
