@@ -44,16 +44,29 @@ const onClickUpdateButton = function () {
 
   $('.content').fadeIn()
   $('#update-flashcard').fadeIn()
+  // $('.view-all').fadeOut()
 
   $('#view-all').hide()
-  $('#content-status-message').text('Edit card')
+  $('#content-status-message').text('Edit existing card')
 
   $('.card-id-update').val('')
   $('.card-front-text').val('')
   $('.card-back-text').val('')
+
   // $('.content').fadeIn()
   // $('#create-flashcard').hide()
   // $('#view-all').hide()
+  //
+  // if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
+  //   // $('#update-flashcard').fadeIn()
+  //   $('#content-status-message').text('Edit card')
+  // } else if ($('.card-response').children().length === 0) {
+  //   // $('#update-flashcard').hide()
+  //   $('#content-status-message').text('Please create a card first.')
+  // } else {
+  //   // $('#update-flashcard').fadeIn()
+  //   $('#content-status-message').text('Edit card')
+  // }
 
   // if ($("#content-status-message:contains('Card added to deck successfully')").length > 0) {
   //   $('#update-flashcard').fadeIn()
