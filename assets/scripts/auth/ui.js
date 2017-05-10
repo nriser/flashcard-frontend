@@ -94,7 +94,7 @@ const signOutSuccess = () => {
 }
 
 const signOutFailure = () => {
-  $('.status-message').text('Something went wrong. Please try again.')
+  $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
 module.exports = {

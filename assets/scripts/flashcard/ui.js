@@ -35,17 +35,17 @@ const createFlashcardSuccess = (response) => {
 const createFlashcardFailure = () => {
   console.log('Something went wrong')
   $('#delete-flashcard').empty()
-  // $('.status-message').text('Please sign in first.')
+  $('#content-status-message').text('Please enter a word and a definition.')
 }
 
-const getFlashcardSuccess = (response) => {
-  console.log('response is', response)
-  // store.flashcard = response.flashcard
-}
-
-const getFlashcardFailure = () => {
-  console.log('Something went wront')
-}
+// const getFlashcardSuccess = (response) => {
+//   console.log('response is', response)
+//   // store.flashcard = response.flashcard
+// }
+//
+// const getFlashcardFailure = () => {
+//   console.log('Something went wront')
+// }
 
 const getFlashcardsSuccess = (response) => {
   // $('.delete-flashcard').on('click', onDeleteFlashcard)
@@ -77,6 +77,11 @@ const getFlashcardsSuccess = (response) => {
 
   $('#view-all').fadeIn()
   $('.content').hide()
+}
+
+const getFlashcardsFailure = () => {
+  console.log('Something went wrong')
+  $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
 const onDeleteFlashcard = function (event) {
@@ -141,10 +146,6 @@ const createDataObject = function (flashcardId) {
   //   })
 }
 
-const getFlashcardsFailure = () => {
-  console.log('Something went wrong')
-}
-
 const updateFlashcardSuccess = (response) => {
   console.log('response is', response)
   $('#content-status-message').text('Card updated successfully')
@@ -155,7 +156,7 @@ const updateFlashcardSuccess = (response) => {
 }
 
 const updateFlashcardFailure = () => {
-  console.log('something went wrong with the udpate')
+  $('#content-status-message').text('Please enter a word, definition, and a valid card ID.')
 }
 
 const deleteFlashcardSuccess = (response) => {
@@ -164,13 +165,14 @@ const deleteFlashcardSuccess = (response) => {
 }
 
 const deleteFlashcardFailure = () => {
+  $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
 module.exports = {
   createFlashcardSuccess,
   createFlashcardFailure,
-  getFlashcardSuccess,
-  getFlashcardFailure,
+  // getFlashcardSuccess,
+  // getFlashcardFailure,
   getFlashcardsSuccess,
   getFlashcardsFailure,
   updateFlashcardSuccess,
