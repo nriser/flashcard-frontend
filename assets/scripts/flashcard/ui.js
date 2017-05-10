@@ -93,8 +93,11 @@ const onDeleteFlashcard = function (event) {
   // console.log('$(event.currentTarget).parent() is', $(event.currentTarget).parent())
 
   $(event.currentTarget).parent().fadeOut()
-  // Must have .remove() in order to actually remove from the DOM (make length === 0)
-  $(event.currentTarget).parent().remove()
+  // Wait for fade-out effect to occur before .remove
+  setTimeout(function () {
+    // Must have .remove() in order to actually remove from the DOM (make length === 0)
+    $(event.currentTarget).parent().remove()
+  }, 500)
   // if no cards, show below status message
   if ($('.card-response').children().length === 0) {
     $('#content-status-message').text('You have no cards. Create a new card.')
