@@ -7,7 +7,6 @@ const ui = require('./ui')
 
 // Fix: Change-pw bootstrap modal appearing under background
 // Resource: http://stackoverflow.com/questions/10636667/bootstrap-modal-appearing-under-background
-$('#modal-changepw').appendTo('body')
 
 const onCreateFlashcard = function (event) {
   event.preventDefault()
@@ -27,6 +26,7 @@ const onCreateFlashcard = function (event) {
 // }
 
 const onGetFlashcards = function (event) {
+  console.log('inside onGetFlashcards')
   event.preventDefault()
   api.getFlashcards()
     .then(ui.getFlashcardsSuccess)
@@ -41,7 +41,7 @@ const onClickUpdateButton = function () {
   $('#create-flashcard').hide()
 
   $('.content').fadeIn()
-  $('#update-flashcard').fadeIn()
+  $('.update-flashcard').fadeIn() // **
 
   $('#view-all').hide()
   $('#content-status-message').text('Edit existing card')
@@ -52,7 +52,7 @@ const onClickUpdateButton = function () {
 }
 
 const onClickCreateButton = function () {
-  $('#update-flashcard').hide()
+  $('.update-flashcard').hide() // **
 
   $('.content').fadeIn()
   $('#create-flashcard').fadeIn()
@@ -65,19 +65,10 @@ const onClickCreateButton = function () {
   $('.card-back-text').val('')
 }
 
-const onUpdateFlashcard = function (event) {
-  event.preventDefault()
-  const data = getFormFields(this)
-  api.updateFlashcard(data)
-    .then(ui.updateFlashcardSuccess)
-    .catch(ui.updateFlashcardFailure)
-}
-
 const addFlashcardHandlers = () => {
   $('#create-flashcard').on('submit', onCreateFlashcard)
   // $('#get-flashcard').on('submit', onGetFlashcard)
   $('#get-flashcards').on('submit', onGetFlashcards)
-  $('#update-flashcard').on('submit', onUpdateFlashcard)
   $('#update-card-button').on('click', onClickUpdateButton)
   $('#create-card-button').on('click', onClickCreateButton)
 }

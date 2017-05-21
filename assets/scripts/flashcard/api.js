@@ -40,6 +40,7 @@ const getFlashcards = function () {
 
 // PATCH
 const updateFlashcard = function (data) {
+  console.log('at api/updateFlashcard')
   return $.ajax({
     method: 'PATCH',
     url: config.apiOrigin + '/flashcards/' + data.flashcard.id,

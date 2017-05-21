@@ -9,7 +9,6 @@ const signUpSuccess = (response) => { // argument can be (response) or something
   $('.signup-status-message').text('Successfully signed up. Please wait for page to load.')
   $('#modal-signup').modal('hide')
   $('.header').hide()
-  // $('#update-flashcard').hide()
   $('.flashcard-container').fadeIn()
   $('.flashcard-container-header').show()
   $('footer').fadeIn()
