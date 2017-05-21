@@ -83,9 +83,11 @@ const createDataObject = function (flashcardId) {
   }
 
   event.preventDefault()
+  console.log('data at createDataObject is ', data)
+  // debugger
   api.deleteFlashcard(data)
-    .then(ui.getFlashcardsSuccess)
-    .catch(ui.getFlashcardsFailure)
+    .then(deleteFlashcardSuccess)
+    .catch(deleteFlashcardFailure)
 }
 
 const onUpdateFlashcard = (event) => {
@@ -133,12 +135,14 @@ const updateFlashcardFailure = () => {
   $('#content-status-message').text('Please enter a word, definition, and a valid card ID.')
 }
 
-const deleteFlashcardSuccess = (response) => {
+const deleteFlashcardSuccess = () => {
+  console.log('card deleted successfully!')
   // $('#content-status-message').text('Card updated successfully')
 }
 
 const deleteFlashcardFailure = () => {
-  $('#content-status-message').text('Something went wrong. Please try again.')
+  console.log('card could not be deleted')
+  $('#content-status-message').text('Something went wrong with deleteFlashcardFailure. Please try again.')
 }
 
 (function parallaxEffect () {
