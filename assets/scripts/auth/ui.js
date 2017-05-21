@@ -5,6 +5,9 @@ const flashcardui = require('../flashcard/ui')
 
 const store = require('../store.js')
 
+// prevent modal from appearing behind backdrop by appending modal to body
+$('#modal-changepw').appendTo('body')
+
 const signUpSuccess = (response) => { // argument can be (response) or something too. Just an argument name
   $('.signup-status-message').text('Successfully signed up. Please wait for page to load.')
   $('#modal-signup').modal('hide')
