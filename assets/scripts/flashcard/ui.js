@@ -3,11 +3,10 @@
 const store = require('../store.js')
 const showFlashcardsTemplate = require('../templates/flashcard-listing.handlebars')
 const api = require('./api')
-const ui = require('./ui')
 const getFormFields = require(`../../../lib/get-form-fields`)
 
 const createFlashcardSuccess = (response) => {
-  $('#content-status-message').text('Card added to deck successfully (ID: ' + response.flashcard.id + ' )')
+  $('#content-status-message').text('Card added to deck successfully')
 
   // reset form fields
   $('.create-front-text').val('')
