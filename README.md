@@ -1,5 +1,11 @@
 # Flashcard App built by Nikki Riser
 
+![Kioku - View all cards](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Kioku.png)
+
+![Kioku - Create a card](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Kioku2.png)
+
+# Project Links
+
 - Link to the backend API repo: https://github.com/nriser/flashcard-api
 - Link to the frontend repo: https://github.com/nriser/flashcard-frontend
 - Link to the deployed API: https://kiokuflashcards.herokuapp.com/
@@ -9,7 +15,6 @@
 
 - Front-end: HTML, CSS, SCSS, JavaScript, jQuery, ajax, Bootstrap, Handlebars.js
 - Back-end: Rails API, Rails server, jQuery
-
 
 ## How to use the App
 
@@ -76,12 +81,6 @@ Many to many between authors and cards, through decks:
 
 I would also like create a functionality that tracks how many words users are able to memorize.
 
-
-## Wireframe:
-
-https://drive.google.com/file/d/0B085YpY7Y_tmdV9JbjlpVU5haXNDYzh6NDBZb2dPbndzb0Jz/view?usp=sharing
-
-
 ## User stories:
 
 1. As a user, I want to sign up so that I can sign in
@@ -97,3 +96,7 @@ without having to rely on patterns.
 10. As a user, I want to delete flashcards so that I so that I can have only the words I need to study.
 11. As a user, I want to add other users' flashcards into my own deck so that I can study more words.
 12. As a user, I want to sign out so that I can have only the words I need to study.
+
+## Wireframe:
+
+![Kioku - wireframe](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Sketches.pdf)
