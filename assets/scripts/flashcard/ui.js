@@ -20,7 +20,6 @@ const createFlashcardFailure = () => {
 }
 
 const getFlashcardsSuccess = (response) => {
-  console.log('inside getFlashcardsSuccess!')
   // store.flashcard = response.flashcard // store the flashcard object in user object (store)
   const showFlashcardsHtml = showFlashcardsTemplate({ flashcards: response.flashcards })
   $('#view-all').empty() // use .empty() instead of .html()
@@ -28,7 +27,6 @@ const getFlashcardsSuccess = (response) => {
   $('#view-all').append(showFlashcardsHtml) // first spot in which the elelments are appended to the dom.
 
   $('.modal-update-button').on('click', function () {
-    console.log('Update button click: ', $(event.target).data('id'))
     store.buttonToUpdate = $(event.target).data('id')
     // store.buttonToUpdate = event.target.data('id')
   })
@@ -82,8 +80,6 @@ const createDataObject = function (flashcardId) {
   }
 
   event.preventDefault()
-  console.log('data at createDataObject is ', data)
-  // debugger
   api.deleteFlashcard(data)
     .then(deleteFlashcardSuccess)
     .catch(deleteFlashcardFailure)
@@ -92,24 +88,11 @@ const createDataObject = function (flashcardId) {
 const onUpdateFlashcard = (event) => {
   event.preventDefault()
 
-  console.log('event is ', event)
-  console.log('event.target is', event.target)
-  console.log('event.target.id is ', $(event.target).data('id'))
-
   const data = getFormFields(event.target)
   data.flashcard.id = store.buttonToUpdate
-  // const targ = store.buttonToUpdate
-  // const targ = $(event.target).attr('data-id')
-  // console.log(targ)
-  // console.log($(event.target).parent().siblings('.modal-header').children('button').data('id'))
-  // debugger
-  // data.flashcard.id = $(event.target).parent().siblings('.modal-header').children('button').data('id')
-  // console.log('newContent.flashcard.id is', newContent.flashcard.id)
-    // debugger
   $('#modal-update').appendTo('body') // prevent backdrop
 
   api.updateFlashcard(data)
-    .then((data) => console.log('data is: ', data))
     .then(updateFlashcardSuccess)
     .then(() => {
       api.getFlashcards()
@@ -120,7 +103,6 @@ const onUpdateFlashcard = (event) => {
 }
 
 const updateFlashcardSuccess = () => {
-  console.log('went inside ui/updateFlashcardSuccess')
   // getFlashcardsSuccess()
   $('#content-status-message').text('Card updated successfully')
   // reset form fields
@@ -130,17 +112,14 @@ const updateFlashcardSuccess = () => {
 }
 
 const updateFlashcardFailure = () => {
-  console.log('went inside ui/updateFlashcardFailure')
   $('#content-status-message').text('Please enter a word, definition, and a valid card ID.')
 }
 
 const deleteFlashcardSuccess = () => {
-  console.log('card deleted successfully!')
   // $('#content-status-message').text('Card updated successfully')
 }
 
 const deleteFlashcardFailure = () => {
-  console.log('card could not be deleted')
   $('#content-status-message').text('Something went wrong with deleteFlashcardFailure. Please try again.')
 }
 

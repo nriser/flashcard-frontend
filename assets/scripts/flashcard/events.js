@@ -26,7 +26,6 @@ const onCreateFlashcard = function (event) {
 // }
 
 const onGetFlashcards = function (event) {
-  console.log('inside onGetFlashcards')
   event.preventDefault()
   api.getFlashcards()
     .then(ui.getFlashcardsSuccess)
