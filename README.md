@@ -1,6 +1,9 @@
 # Flashcard App built by Nikki Riser
+![Kioku - View all cards](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Kioku3.png)
+
 
 ![Kioku - View all cards](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Kioku.png)
+
 
 ![Kioku - Create a card](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Kioku2.png)
 
@@ -99,4 +102,9 @@ without having to rely on patterns.
 
 ## Wireframe:
 
-![Kioku - wireframe](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/Sketches.pdf)
+![Kioku wireframe - 1](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/kioku_1.png)
+![Kioku wireframe - 2](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/kioku_2.png)
+![Kioku wireframe - 3](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/kioku_3.png)
+![Kioku wireframe - 4](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/kioku_4.png)
+![Kioku wireframe - 5](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/kioku_5.png)
+![Kioku wireframe - 6](https://s3.us-east-2.amazonaws.com/wdi-nikki-projects/kioku_6.png)
