@@ -14,6 +14,8 @@
 - Link to the deployed API: https://kiokuflashcards.herokuapp.com/
 - Link to the deployed flashcard app: https://nriser.github.io/flashcard-frontend/
 
+Feel free to view the demo site ("deployed flashcard app") with the username "demo@mail.com" and password "demo" to view ready-made flashcards.
+
 ## Technologies used
 
 - Front-end: HTML, CSS, SCSS, JavaScript, jQuery, ajax, Bootstrap, Handlebars.js
@@ -26,17 +28,38 @@
 2. Listen to the audio to practice the correct pronunciation. The audio is spefically meant for Japanese words.
 3. Create more cards and study the words you've created.
 
+## Idea
 
-## Planning, development, and problem-solving strategy:
+> "Kioku" means "memory" in Japanese.
 
-I came up with the idea of building a Japanese/English language flashcard web app because this app would be a good starting point for a
-Japanese/English dictionary app that I would like to build in the future. Before joining GA, I found a set of data made public that consists of Japanese words/phrases matched with definitions in English and Japanese and imported it into a database I built in MySQL, but had difficulty representing Japanese unicode characters. I decided to take this opportunity to work on a project that allows me to work on overcoming this difficulty so that I could apply what I learn onto my future project. As for this flashcard app, the vision is to have it be used by people who would like to memorize Japanese words and short phrases via repetition.
+I came up with the idea of building a Japanese/English language flashcard web app because this app would be a good starting point for a Japanese/English dictionary app that I would like to build in the future. As for this flashcard app, the vision is to have it be used by people who would like to memorize Japanese words and short phrases via repetition.
 
-In building this app, I followed the recommended schedule provided by the General Assembly consultants. I started with making a wireframe, and then proceeded on to making user stories, which allowed me to think in a user's perspective. I initially built the app with simple buttons and forms that would allow me to test out the ajax calls to the API later on. Moving on to the backend, I built my database, tables, and relationships between the user and flashcard resources. Once I finished building my backend, I revisited the frontend and started building the code to ping the API and receive data back.
+## Approach
 
-I had the most trouble with Rails API, especially understanding the path that the server takes to return a response back to a client. What helped me a lot during the development process was to use console.log and 'debugger' at every step of the code in order to pinpoint where exactly I am getting the error responses, and to check what data is being returned at each stage. This strategy has helped me immensely throughout the development process.
+In building this app, I started with making a wireframe, and then proceeded on to making user stories. I initially built the app with simple buttons and forms that would allow me to test out the ajax calls to the API later on. Moving on to the backend, I built my database, tables, and entity relationship between the user and flashcard resources. Once I finished building my backend, I revisited the frontend and started building the code to ping the API and receive data back.
+
+Moving onto styling, I built the flashcards to look like index cards using only CSS. For example, the blue lines and the red line are made using the following code:
+
+```css
+background-image:
+  linear-gradient(180deg, white 19.7%, #F0A4A4 19.7%, #F0A4A4 20.5%, transparent 1px),
+  repeating-linear-gradient(0deg, #fff, #fff 9.5%, #DDD 9.5%, #DDD 10%);
+```
+
+The flipping animation of the flashcards is also built with CSS only, by implementing the ```transform``` property on hover:
+
+```css
+.flip-container:hover .flipper {
+	transform: rotateY(180deg);
+}
+```
+Please view the source for more details.
+
+Finally, I added the audio for each word via use of a text-to-speech 3rd party API. The audio is added to each word by using a Handlebars each loop.
 
 ## API Routes
+
+API routes for users and words.
 
 #### Users
 | Verb   | URI Pattern          | Controller#Action |
@@ -46,11 +69,6 @@ I had the most trouble with Rails API, especially understanding the path that th
 | DELETE | /sign-out/:id        | users#signout     |
 | PATCH  | /change-password/:id | users#changepw    |
 
-- post '/sign-up' => 'users#signup'
-- post '/sign-in' => 'users#signin'
-- delete '/sign-out/:id' => 'users#signout'
-- patch '/change-password/:id' => 'users#changepw'
-
 #### Words
 | Verb   | URI Pattern      | Controller#Action      |
 |--------|------------------|------------------------|
@@ -58,11 +76,6 @@ I had the most trouble with Rails API, especially understanding the path that th
 | POST   | /flashcards      | flashcards#create      |
 | PATCH  | /flashcards/:id  | flashcards#update      |
 | DELETE | /flashcards/:id  | flashcards#destroy     |
-
-- get '/flashcards/' => 'flashcards#index'
-- post '/flashcards/' => 'flashcards#create'
-- patch '/flashcards/:id' => 'flashcards#update'
-- delete '/flashcards/:id' => 'flashcards#destroy'
 
 ## 3rd Party API
 
