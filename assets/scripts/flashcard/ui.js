@@ -51,7 +51,7 @@ const getFlashcardsSuccess = (response) => {
 }
 
 const getFlashcardsFailure = () => {
-  $('#content-status-message').text('Something went wrong with getFlashcardsFailure. Please try again.')
+  $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
 const onDeleteFlashcard = function (event) {
@@ -120,7 +120,7 @@ const deleteFlashcardSuccess = () => {
 }
 
 const deleteFlashcardFailure = () => {
-  $('#content-status-message').text('Something went wrong with deleteFlashcardFailure. Please try again.')
+  $('#content-status-message').text('Something went wrong. Please try again.')
 }
 
 (function parallaxEffect () {
