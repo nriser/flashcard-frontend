@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>KIOKU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+
+  <header id="header" class="header">
+    <div class="module parallax parallax-1">
+      <div class="parallax-container"
+
+        <div class="auth-modals">
+
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="modal-signup-button modal-btn" data-toggle="modal" data-target="#modal-signup">Sign up</button>
+          <!-- Modal -->
+          <div id="modal-signup" class="modal fade modal-signup" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <!-- Modal header-->
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sign up</h4>
+                </div>
+                <!-- Modal body-->
+                <div class="modal-body">
+                  <form id="sign-up" class="text-align-center">
+                    <fieldset>
+                      <input type="text" name="credentials[email]" placeholder="email">
+                      <!-- name matters. Our object is made to look like what we see in sign-uo.sh  -->
+                      <input type="password" name="credentials[password]" placeholder="password">
+                      <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
+                      <input type="submit" name="submit" value="Submit">
+                    </fieldset>
+                  </form>
+                </div>
+                <!-- Modal footer-->
+                <div class="modal-footer">
+                  <p id="signup-status-message" class="signup-status-message text-align-center"></p>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="modal-btn modal-signin-button" data-toggle="modal" data-target="#modal-signin">Sign in</button>
+          <!-- Modal -->
+          <div id="modal-signin" class="modal fade modal-signin" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <!-- Modal header-->
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sign in</h4>
+                </div>
+                <!-- Modal body-->
+                <div class="modal-body">
+                  <form id="sign-in" class="text-align-center">
+                    <fieldset>
+                      <input type="text" name="credentials[email]" placeholder="email">
+                      <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+                      <input type="password" name="credentials[password]" placeholder="password">
+                      <input type="submit" name="submit" value="Submit">
+                    </fieldset>
+                  </form>
+                </div>
+                <!-- Modal footer-->
+                <div class="modal-footer">
+                  <p id="signin-status-message" class="signin-status-message text-align-center"></p>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero">
+          <h1 id="hero-header" class="hero-header text-align-center">Ki<span class="blur red">o</span>ku</h1>
+          <h3 id="header-status-message" class="header-status-message text-align-center">Master Japanese words</h3>
+          <h3 id="scroll-down-message" class="scroll-down-message">
+            Scroll down to learn more
+            <div class="glyphicon-hand-down-container">
+              <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
+            </div>
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="module action-content">
+
+      <div class="instructions">
+        <h2 class="how-to">How to use this app</h2>
+      </div>
+
+      <div class="action-content-container">
+        <div class="first-step">
+          <span class="glyphicon glyphicon-pencil"></span>
+          <h3>Create a card. Write a Japanese word to study. Can't type in Japanese? Write it phonetically.</h3>
+        </div>
+
+        <div class="second-step">
+          <span class="glyphicon glyphicon-headphones"></span>
+          <h3>Listen to the audio to practice the correct pronunciation.</h3>
+        </div>
+
+        <div class="third-step">
+          <span class="glyphicon glyphicon-ok"></span>
+          <h3>Keep studying. Master Japanese words!</h3>
+        </div>
+    </div>
+  </div>
+
+  </header>
+
+
+  <section id="flashcard-view" class="flashcard-view">
+    <header class="flashcard-container-header">
+      <h2>Ki<span class="red">o</span>ku</h2>
+    </header>
+
+    <div id="flashcard-container" class="flashcard-container">
+      <h3 id="content-status-message" class="content-status-message text-align-center"></h3>
+
+      <input id="hamburger-checkbox" class="hamburger-checkbox" type="checkbox" name="hamburger-menu"/>
+      <label id="hamburger-label" class="hamburger-label" for="hamburger-checkbox"></label>
+
+      <aside id="sidebar" class="sidebar">
+
+        <div class="aside-content">
+
+          <form id="get-flashcards" class="get-flashcards text-align-center">
+            <fieldset>
+              <input type="submit" name="submit" value="View All Cards">
+            </fieldset>
+          </form>
+
+          <button id='create-card-button' class='create-card-button' type="button" name="button">
+            Create a card
+          </button>
+
+          <!-- <button id='update-card-button' class='update-card-button' type="button" name="button">
+            Edit a card
+          </button> -->
+
+        </div>
+      </aside>
+
+      <main id="content" class="content">
+
+        <form id="create-flashcard" class="create-flashcard text-align-center">
+          <fieldset>
+            <div class="card-front-back">
+              <div class="card card-front">
+                <input class="card-front-text create-front-text" type="text" name="flashcard[word]" placeholder="Enter a word">
+              </div>
+              <div class="card card-back">
+                <input class="card-back-text create-back-text" type="text" name="flashcard[definition]" placeholder="Enter a definition">
+              </div>
+            </div>
+            <input class="create-submit" type="submit" name="submit" value="Add card to deck">
+          </fieldset>
+        </form>
+      </main>
+
+      <main id=view-all-container class="view-all-container">
+        <div id="view-all" class="view-all"><!--handlebar--></div>
+      </main>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <div id="footer-modals" class="footer-modals">
+
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="modal-btn" data-toggle="modal" data-target="#modal-changepw">Change password</button>
+      <!-- Modal -->
+      <div id="modal-changepw" class="modal fade modal-signin" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <!-- Modal header-->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Change password</h4>
+            </div>
+            <!-- Modal body-->
+            <div class="modal-body">
+              <form id="change-password" class="change-password text-align-center">
+                <fieldset>
+                  <input type="password" name="passwords[old]" placeholder="old password">
+                  <!-- [email] is the key of credentials object. name matters. Our object is made to look like what we see in sign-uo.sh  -->
+                  <input type="password" name="passwords[new]" placeholder="new password">
+                  <!-- what will our object look like at this point? see notes (1)-->
+                  <input type="submit" name="submit" value="Submit">
+                </fieldset>
+              </form>
+            </div>
+
+            <!-- Modal footer-->
+            <div class="modal-footer">
+              <p id="change-pw-status-message" class="change-pw-status-message text-align-center"></p>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="sign-out" class="sign-out text-align-center">
+        <fieldset>
+          <input type="submit" name="submit" value="Sign out">
+        </fieldset>
+      </form>
+
+      <p id="footer-message" class="footer-message">
+        Designed and Built with <span class="glyphicon glyphicon-heart"></span> by Nikki Riser
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
